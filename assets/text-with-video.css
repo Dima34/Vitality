@@ -1,0 +1,38 @@
+.text-with-video {
+    display: grid;
+    grid-template-columns: 450px 1fr;
+    column-gap: 75px;
+}
+
+.text-with-video h2,
+.text-with-video h1,
+.text-with-video p{
+  margin: 0;
+}
+
+.text-with-video__left{
+  display: flex;
+  gap: 80px;
+  flex-direction: column;
+}
+
+.text-with-video__left-text{
+  display: flex;
+  gap: 20px;
+  flex-direction: column;
+}
+
+.text-with-video__button-block{
+  display: flex;
+  gap: 20px;
+  flex-direction: row;
+  align-items: center;
+  max-width: 355px;
+  width: 100%;
+}
+
+.button-block__text-container{
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}

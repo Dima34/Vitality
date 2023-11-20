@@ -1,0 +1,157 @@
+{{ 'text-with-video.css' | asset_url | stylesheet_tag }}
+
+{%- style -%}
+    .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+    }
+
+    @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top }}px;
+    padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+    }
+{%- endstyle -%}
+
+{% assign scheme1 = settings.color_schemes | first %}
+
+<div class="text-with-video page-width section-{{ section.id }}-padding{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
+    <div class="text-with-video__left">
+        <div class="text-with-video__left-text">
+            <h1>{{ section.settings.title }}</h1>
+            <p>{{ section.settings.subtitle }}</p>
+        </div>
+
+        <div class="text-with-video__button-block">
+            <a href="{{ section.settings.anchor-link }}" class="button-block_link">
+                <svg width="85" height="85" viewBox="0 0 85 85" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="42.5" cy="42.5" r="42" stroke="url(#paint0_linear_84_2834)"/>
+                    <path d="M41.1666 30.3333V50.4647L31.5128 40.8108L30.3333 41.9999L42 53.6666L53.6666 41.9999L52.4871 40.8108L42.8333 50.4647V30.3333H41.1666Z"
+                          fill="url(#paint1_linear_84_2834)"/>
+                    <defs>
+                        <linearGradient id="paint0_linear_84_2834" x1="5.23874" y1="5.54328e-07" x2="93.8928"
+                                        y2="71.651" gradientUnits="userSpaceOnUse">
+                            <stop stop-color="#14D21C"/>
+                            <stop offset="1" stop-color="#17BBD1"/>
+                        </linearGradient>
+                        <linearGradient id="paint1_linear_84_2834" x1="31.7714" y1="30.3333" x2="56.1078" y2="50.0022"
+                                        gradientUnits="userSpaceOnUse">
+                            <stop stop-color="#14D21C"/>
+                            <stop offset="1" stop-color="#17BBD1"/>
+                        </linearGradient>
+                    </defs>
+                </svg>
+            </a>
+            <span class="button-block__text-container">
+              <h2>{{ section.settings.anchor-link-title }}</h2>
+              <p class="small">{{ section.settings.anchor-link-text }}</p>  
+            </span>
+        </div>
+
+    </div>
+
+    <div class="text-with-video__right">
+        {% if section.settings.video %}
+            {{
+            section.settings.video
+            | video_tag: image_size: '715x', loop: section.settings.enable_video_looping, controls: false, muted: true, autoplay: true
+            }}
+        {% endif %}
+
+        <svg class="svg">
+            <clipPath id="my-clip-path" clipPathUnits="objectBoundingBox">
+                <path d="M0.264,0.475 C0.351,0.508,0.417,0.591,0.436,0.695 L0.46,0.827 C0.49,0.991,0.663,1,0.772,0.944 C0.88,0.832,0.843,0.628,0.704,0.575 L0.571,0.525 C0.484,0.492,0.418,0.409,0.399,0.305 L0.375,0.173 C0.345,0.009,0.172,-0.056,0.063,0.056 C-0.046,0.168,-0.008,0.372,0.131,0.425 L0.264,0.475 M0.882,0.397 C0.816,0.397,0.763,0.336,0.763,0.261 C0.763,0.186,0.816,0.125,0.882,0.125 C0.947,0.125,1,0.186,1,0.261 C1,0.336,0.947,0.397,0.882,0.397"></path>
+            </clipPath>
+        </svg>
+
+    </div>
+</div>
+
+{% schema %}
+{
+  "name": "Text with video",
+  "class": "section",
+  "disabled_on": {
+    "groups": [
+      "header",
+      "footer"
+    ]
+  },
+  "settings": [
+    {
+      "type": "video",
+      "id": "video",
+      "label": "Video"
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "t:sections.all.colors.label",
+      "default": "background-1"
+    },
+    {
+      "type": "header",
+      "content": "Text section"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "default": "Performance Bloodwork",
+      "label": "Title"
+    },
+    {
+      "type": "text",
+      "id": "subtitle",
+      "default": "The science-based bloodwork, analysis and programming chosen by the world’s top athletes and performers to maximize physiological potential",
+      "label": "Subtitle"
+    },
+    {
+      "type": "header",
+      "content": "Anchor link"
+    },
+    {
+      "type": "text",
+      "id": "anchor-link",
+      "default": "#",
+      "label": "Anchor link"
+    },
+    {
+      "type": "text",
+      "id": "anchor-link-title",
+      "default": "Join Vitality",
+      "label": "Anchor link title"
+    },
+    {
+      "type": "text",
+      "id": "anchor-link-text",
+      "default": "Join the waitlist to receive an exclusive invitation to Vitality Blueprint",
+      "label": "Anchor link subtitle"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.all.padding.section_padding_heading"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 200,
+      "step": 10,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_top",
+      "default": 80
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 200,
+      "step": 10,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_bottom",
+      "default": 80
+    }
+  ]
+}
+{% endschema %}

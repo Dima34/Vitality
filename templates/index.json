@@ -1,5 +1,12 @@
 {
   "sections": {
+    "text_with_video" : {
+      "type": "text-with-video",
+      "settings" : {
+        "padding_top": 140,
+        "padding_bottom": 140
+      }
+    },
     "image_banner": {
       "type": "image-banner",
       "blocks": {
@@ -69,6 +76,7 @@
     }
   },
   "order": [
+    "text_with_video",
     "image_banner",
     "featured_collection"
   ]
