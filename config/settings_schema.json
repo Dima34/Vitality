@@ -27,6 +27,21 @@
       },
       {
         "type": "image_picker",
+        "id": "logo_mobile",
+        "label": "Mobile logo"
+      },
+      {
+        "type": "range",
+        "id": "logo_mobile_width",
+        "min": 20,
+        "max": 120,
+        "step": 5,
+        "default": 45,
+        "unit": "px",
+        "label": "Mobile logo width"
+      },
+      {
+        "type": "image_picker",
         "id": "favicon",
         "label": "t:settings_schema.logo.settings.favicon.label",
         "info": "t:settings_schema.logo.settings.favicon.info"
@@ -241,6 +256,12 @@
             "id": "Shadow",
             "label": "Shadow",
             "default": "#121212"
+          },
+          {
+            "type": "color",
+            "id": "color_active",
+            "label": "Active Color",
+            "default": "#000000"
           }
         ],
         "role": {
@@ -316,7 +337,7 @@
         "id": "page_width",
         "min": 1000,
         "max": 1600,
-        "step": 100,
+        "step": 20,
         "default": 1200,
         "unit": "px",
         "label": "t:settings_schema.layout.settings.page_width.label"

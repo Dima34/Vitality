@@ -108,7 +108,10 @@
         --color-button-secondary-clicked-label: {{ scheme.settings.secondary_button_clicked_label.red }},{{ scheme.settings.secondary_button_clicked_label.green }},{{ scheme.settings.secondary_button_clicked_label.blue }};
         --color-button-secondary-clicked-outline: {{ scheme.settings.secondary_button_clicked_outline.red }},{{ scheme.settings.secondary_button_clicked_outline.green }},{{ scheme.settings.secondary_button_clicked_outline.blue }};
         --color-button-secondary-clicked-shadow: {{ scheme.settings.secondary_button_clicked_shadow.red }},{{ scheme.settings.secondary_button_clicked_shadow.green }},{{ scheme.settings.secondary_button_clicked_shadow.blue }};
-      }
+      
+        {% comment %}Other colors{% endcomment %}
+        --color-active: {{ scheme.settings.color_active.red }},{{ scheme.settings.color_active.green }},{{ scheme.settings.color_active.blue }};
+        }
       {% endfor %}
 
       {{ scheme_classes | prepend: 'body' }} {

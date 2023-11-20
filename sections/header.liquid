@@ -183,6 +183,9 @@
                   sizes: sizes,
                   preload: true
                 }}
+                {{ settings.logo_mobile | image_url: width: 100 | image_tag:
+                class: 'header__heading-logo-mobile motion-reduce',
+                width: settings.logo_mobile_width}}
               </div>
             {%- else -%}
               <span class="h2">{{ shop.name }}</span>
@@ -314,7 +317,7 @@
         {%- endcase -%}
       {%- endfor -%}
 
-      {% comment %}paste sign-in button here{% endcomment %}
+      <a href="{{ section.settings.addition_button_page }}" class="header__addition-button button-filled button-secondary-colors">{{ section.settings.addition_button_label }}</a>
     </div>
   </header>
 </{% if section.settings.sticky_header_type != 'none' %}sticky-header{% else %}div{% endif %}>
@@ -505,6 +508,21 @@
       "default": "middle-left",
       "label": "t:sections.header.settings.logo_position.label",
       "info": "t:sections.header.settings.logo_help.content"
+    },
+    {
+      "type": "header",
+      "content": "Addition button"
+    },
+    {
+      "type": "page",
+      "id": "addition_button_page",
+      "label": "Addition button"
+    },
+    {
+      "type": "text",
+      "id": "addition_button_label",
+      "label": "Addition button label",
+      "default": "Sign Up"
     },
     {
       "type": "link_list",
