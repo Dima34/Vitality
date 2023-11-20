@@ -65,7 +65,6 @@
         {% endif %}
         --color-foreground: {{ scheme.settings.text.red }},{{ scheme.settings.text.green }},{{ scheme.settings.text.blue }};
         --color-shadow: {{ scheme.settings.shadow.red }},{{ scheme.settings.shadow.green }},{{ scheme.settings.shadow.blue }};
-        --color-button: {{ scheme.settings.button.red }},{{ scheme.settings.button.green }},{{ scheme.settings.button.blue }};
         --color-button-text: {{ scheme.settings.button_label.red }},{{ scheme.settings.button_label.green }},{{ scheme.settings.button_label.blue }};
         --color-secondary-button: {{ scheme.settings.background.red }},{{ scheme.settings.background.green }},{{ scheme.settings.background.blue }};
         --color-secondary-button-text: {{ scheme.settings.secondary_button_label.red }},{{ scheme.settings.secondary_button_label.green }},{{ scheme.settings.secondary_button_label.blue }};
@@ -74,6 +73,41 @@
         --color-badge-background: {{ scheme.settings.background.red }},{{ scheme.settings.background.green }},{{ scheme.settings.background.blue }};
         --color-badge-border: {{ scheme.settings.text.red }},{{ scheme.settings.text.green }},{{ scheme.settings.text.blue }};
         --payment-terms-background-color: rgb({{ scheme.settings.background.rgb }});
+        
+        {% comment %}Text colors{% endcomment %}
+        --color-text-primary:  {{ scheme.settings.text-primary }};
+        --color-text-secondary:  {{ scheme.settings.text-secondary }};
+        --color-text-tertiary:  {{ scheme.settings.text-tertiary }};
+        --color-text-tertiary:  {{ scheme.settings.text-tertiary }};
+
+        {% comment %}Button colors{% endcomment %}
+        {% comment %}Primary button{% endcomment %}
+        --color-button: {{ scheme.settings.button.red }},{{ scheme.settings.button.green }},{{ scheme.settings.button.blue }};
+        --color-button-label: {{ scheme.settings.button_label.red }},{{ scheme.settings.button_label.green }},{{ scheme.settings.button_label.blue }};
+        --color-button-outline: {{ scheme.settings.button_outline.red }},{{ scheme.settings.button_outline.green }},{{ scheme.settings.button_outline.blue }};
+        --color-button-shadow: {{ scheme.settings.button_shadow.red }},{{ scheme.settings.button_shadow.green }},{{ scheme.settings.button_shadow.blue }};
+        --color-button-hover: {{ scheme.settings.button_hover.red }},{{ scheme.settings.button_hover.green }},{{ scheme.settings.button_hover.blue }};
+        --color-button-hover-label: {{ scheme.settings.button_hover_label.red }},{{ scheme.settings.button_hover_label.green }},{{ scheme.settings.button_hover_label.blue }};
+        --color-button-hover-outline: {{ scheme.settings.button_hover_outline.red }},{{ scheme.settings.button_hover_outline.green }},{{ scheme.settings.button_hover_outline.blue }};
+        --color-button-hover-shadow: {{ scheme.settings.button_hover_shadow.red }},{{ scheme.settings.button_hover_shadow.green }},{{ scheme.settings.button_hover_shadow.blue }};
+        --color-button-clicked: {{ scheme.settings.button_clicked.red }},{{ scheme.settings.button_clicked.green }},{{ scheme.settings.button_clicked.blue }};
+        --color-button-clicked-label: {{ scheme.settings.button_clicked_label.red }},{{ scheme.settings.button_clicked_label.green }},{{ scheme.settings.button_clicked_label.blue }};
+        --color-button-clicked-outline: {{ scheme.settings.button_clicked_outline.red }},{{ scheme.settings.button_clicked_outline.green }},{{ scheme.settings.button_clicked_outline.blue }};
+        --color-button-clicked-shadow: {{ scheme.settings.button_clicked_shadow.red }},{{ scheme.settings.button_clicked_shadow.green }},{{ scheme.settings.button_clicked_shadow.blue }};
+        
+        {% comment %}Secondary button{% endcomment %}
+        --color-secondary-button: {{ scheme.settings.secondary_button.red }},{{ scheme.settings.secondary_button.green }},{{ scheme.settings.secondary_button.blue }};
+        --color-secondary-button-label: {{ scheme.settings.secondary_button_label.red }},{{ scheme.settings.secondary_button_label.green }},{{ scheme.settings.secondary_button_label.blue }};
+        --color-secondary-button-outline: {{ scheme.settings.secondary_button_outline.red }},{{ scheme.settings.secondary_button_outline.green }},{{ scheme.settings.secondary_button_outline.blue }};
+        --color-secondary-button-shadow: {{ scheme.settings.secondary_button_shadow.red }},{{ scheme.settings.secondary_button_shadow.green }},{{ scheme.settings.secondary_button_shadow.blue }};
+        --color-secondary-button-hover: {{ scheme.settings.secondary_button_hover.red }},{{ scheme.settings.secondary_button_hover.green }},{{ scheme.settings.secondary_button_hover.blue }};
+        --color-secondary-button-hover-label: {{ scheme.settings.secondary_button_hover_label.red }},{{ scheme.settings.secondary_button_hover_label.green }},{{ scheme.settings.secondary_button_hover_label.blue }};
+        --color-secondary-button-hover-outline: {{ scheme.settings.secondary_button_hover_outline.red }},{{ scheme.settings.secondary_button_hover_outline.green }},{{ scheme.settings.secondary_button_hover_outline.blue }};
+        --color-secondary-button-hover-shadow: {{ scheme.settings.secondary_button_hover_shadow.red }},{{ scheme.settings.secondary_button_hover_shadow.green }},{{ scheme.settings.secondary_button_hover_shadow.blue }};
+        --color-secondary-button-clicked: {{ scheme.settings.secondary_button_clicked.red }},{{ scheme.settings.secondary_button_clicked.green }},{{ scheme.settings.secondary_button_clicked.blue }};
+        --color-secondary-button-clicked-label: {{ scheme.settings.secondary_button_clicked_label.red }},{{ scheme.settings.secondary_button_clicked_label.green }},{{ scheme.settings.secondary_button_clicked_label.blue }};
+        --color-secondary-button-clicked-outline: {{ scheme.settings.secondary_button_clicked_outline.red }},{{ scheme.settings.secondary_button_clicked_outline.green }},{{ scheme.settings.secondary_button_clicked_outline.blue }};
+        --color-secondary-button-clicked-shadow: {{ scheme.settings.secondary_button_clicked_shadow.red }},{{ scheme.settings.secondary_button_clicked_shadow.green }},{{ scheme.settings.secondary_button_clicked_shadow.blue }};
       }
       {% endfor %}
 
