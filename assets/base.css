@@ -3577,7 +3577,7 @@ details-disclosure > details {
         grid-auto-flow: dense;
         grid-template-columns: 1fr 0.5fr 1fr;
         direction: rtl;
-        padding: 10px 0 !important;
+        padding: 8px 0 !important;
     }
     
     .header__heading-logo{
