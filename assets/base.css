@@ -3504,3 +3504,46 @@ details-disclosure > details {
     --border-offset: 0px; /* Prevent the border from growing on buttons when this effect is on. */
   }
 }
+
+/*Primary button colors*/
+.button-primary-colors{
+  background: var(--color-button);
+  color: var(--color-button-label);
+  border: 1px solid var(--color-button-outline);
+  box-shadow: 0px 0px 10px 0px var(--color-button-shadow)
+}
+
+.button-primary-colors:hover{
+  background: var(--color-button-hover);
+  color: var(--color-button-hover-label);
+  border: 1px solid var(--color-button-hover-outline);
+  box-shadow: 0px 0px 10px 0px var(--color-button-hover-shadow)
+}
+
+.button-primary-colors:active{
+  background: var(--color-button-clicked);
+  color: var(--color-button-clicked-label);
+  border: 1px solid var(--color-button-clicked-outline);
+  box-shadow: 0px 0px 10px 0px var(--color-button-clicked-shadow)
+}
+/*Secondary button colors*/
+.button-secondary-colors{
+  background: var(--color-button-secondary);
+  color: var(--color-button-secondary-label);
+  border: 1px solid var(--color-button-secondary-outline);
+  box-shadow: 0px 0px 10px 0px var(--color-button-secondary-shadow)
+}
+
+.button-secondary-colors:hover{
+  background: var(--color-button-secondary-hover);
+  color: var(--color-button-secondary-hover-label);
+  border: 1px solid var(--color-button-secondary-hover-outline);
+  box-shadow: 0px 0px 10px 0px var(--color-button-secondary-hover-shadow)
+}
+
+.button-secondary-colors:active{
+  background: var(--color-button-secondary-clicked);
+  color: var(--color-button-secondary-clicked-label);
+  border: 1px solid var(--color-button-secondary-clicked-outline);
+  box-shadow: 0px 0px 10px 0px var(--color-button-secondary-clicked-shadow)
+}
