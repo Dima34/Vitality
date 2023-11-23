@@ -326,7 +326,7 @@
       },
       "scheme-aad96a06-a994-438d-98a8-aca4cff131ee": {
         "settings": {
-          "background": "#ffffff",
+          "background": "#f6f7f9",
           "background_gradient": "",
           "text": "#121212",
           "text-primary": "#000000",
@@ -357,7 +357,7 @@
           "secondary_button_clicked_outline": "#000000",
           "secondary_button_clicked_shadow": "#000000",
           "Shadow": "#121212",
-          "color_active": "#000000"
+          "color_active": "#14d21c"
         }
       }
     }
