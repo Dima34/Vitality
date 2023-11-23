@@ -180,6 +180,50 @@
     },
     "slider_center_offset": {
       "type": "slider-offset-center",
+      "blocks": {
+        "855dbe1c-bfde-4ae7-b3a9-3e2287579a6f": {
+          "type": "block",
+          "settings": {
+            "title": "Sean O’Malley",
+            "subtitle": "UFC Champion",
+            "text": "Visit Vitality’s nationwide lab network with over 2,000 locations for a blood draw.",
+            "image": "shopify:\/\/shop_images\/slider-1.png"
+          }
+        },
+        "08f7ba02-fb13-46f2-a712-32e5a8776284": {
+          "type": "block",
+          "settings": {
+            "title": "Timothy Jones",
+            "subtitle": "Timothy Jones",
+            "text": "Visit Vitality’s nationwide lab network with over 2,000 locations for a blood draw.",
+            "image": "shopify:\/\/shop_images\/slider-2.png"
+          }
+        },
+        "8ccd7f80-130e-4529-aa0e-365af52c554a": {
+          "type": "block",
+          "settings": {
+            "title": "Ryan Bader",
+            "subtitle": "World Heavyweight Champion",
+            "text": "Visit Vitality’s nationwide lab network with over 2,000 locations for a blood draw.",
+            "image": "shopify:\/\/shop_images\/slider-3.png"
+          }
+        },
+        "8f5bb18f-6deb-4ecd-9af3-2184937593c7": {
+          "type": "block",
+          "settings": {
+            "title": "Mark bell",
+            "subtitle": "UFC Champion",
+            "text": "World Heavyweight Champion",
+            "image": "shopify:\/\/shop_images\/slider-4.png"
+          }
+        }
+      },
+      "block_order": [
+        "855dbe1c-bfde-4ae7-b3a9-3e2287579a6f",
+        "08f7ba02-fb13-46f2-a712-32e5a8776284",
+        "8ccd7f80-130e-4529-aa0e-365af52c554a",
+        "8f5bb18f-6deb-4ecd-9af3-2184937593c7"
+      ],
       "settings": {
         "color_scheme": "",
         "title": "Tailored Programming",
