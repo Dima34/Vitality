@@ -2,65 +2,65 @@
   "sections": {
     "text_with_video_masked": {
       "type": "text-with-video-masked",
-      "settings" : {
+      "settings": {
         "padding_top": 80,
         "padding_bottom": 80,
-        "padding_top_mobile" : 40,
-        "padding_bottom_mobile" : 80
+        "padding_top_mobile": 40,
+        "padding_bottom_mobile": 80
       }
     },
     "video_heading_text": {
       "type": "video-heading-text",
-      "settings" : {
+      "settings": {
         "padding_top": 80,
         "padding_bottom": 80,
-        "padding_top_mobile" : 100,
-        "padding_bottom_mobile" : 100
+        "padding_top_mobile": 100,
+        "padding_bottom_mobile": 100
       }
     },
     "text_caption_video": {
       "type": "text-caption-video",
-      "settings" : {
+      "settings": {
         "padding_top": 145,
         "padding_bottom": 145,
-        "padding_top_mobile" : 100,
-        "padding_bottom_mobile" : 100
+        "padding_top_mobile": 100,
+        "padding_bottom_mobile": 100
       }
     },
     "text_buttons_double_right_card": {
       "type": "text-buttons-double-right-card",
-      "settings" : {
+      "settings": {
         "padding_top": 145,
         "padding_bottom": 140,
-        "padding_top_mobile" : 100,
-        "padding_bottom_mobile" : 100
+        "padding_top_mobile": 100,
+        "padding_bottom_mobile": 100
       }
     },
     "horizontal_cards": {
       "type": "horizontal-cards",
-      "settings" : {
+      "settings": {
         "padding_top": 140,
         "padding_bottom": 200,
-        "padding_top_mobile" : 100,
-        "padding_bottom_mobile" : 100
+        "padding_top_mobile": 100,
+        "padding_bottom_mobile": 100
       }
     },
     "slider_dotted": {
       "type": "slider-dotted",
-      "settings" : {
+      "settings": {
         "padding_top": 140,
         "padding_bottom": 140,
-        "padding_top_mobile" : 100,
-        "padding_bottom_mobile" : 100
+        "padding_top_mobile": 100,
+        "padding_bottom_mobile": 100
       }
     },
     "slider_center_offset": {
       "type": "slider-offset-center",
-      "settings" : {
+      "settings": {
         "padding_top": 140,
         "padding_bottom": 140,
-        "padding_top_mobile" : 100,
-        "padding_bottom_mobile" : 100
+        "padding_top_mobile": 100,
+        "padding_bottom_mobile": 100
       }
     },
     "image_banner": {
