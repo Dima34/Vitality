@@ -323,6 +323,42 @@
           "Shadow": "#121212",
           "color_active": "#000000"
         }
+      },
+      "scheme-aad96a06-a994-438d-98a8-aca4cff131ee": {
+        "settings": {
+          "background": "#ffffff",
+          "background_gradient": "",
+          "text": "#121212",
+          "text-primary": "#000000",
+          "text-secondary": "#000000",
+          "text-tertiary": "#000000",
+          "button": "#f6f7f9",
+          "button_label": "#9FA7AF",
+          "button_outline": "#9FA7AF",
+          "button_shadow": "#000000",
+          "button_hover": "#f6f7f9",
+          "button_hover_label": "#FFFFFF",
+          "button_hover_outline": "#000000",
+          "button_hover_shadow": "#000000",
+          "button_clicked": "#f6f7f9",
+          "button_clicked_label": "#9FA7AF",
+          "button_clicked_outline": "#fff",
+          "button_clicked_shadow": "#fff",
+          "secondary_button": "#121212",
+          "secondary_button_label": "#121212",
+          "secondary_button_outline": "#000000",
+          "secondary_button_shadow": "#000000",
+          "secondary_button_hover": "#121212",
+          "secondary_button_hover_label": "#FFFFFF",
+          "secondary_button_hover_outline": "#000000",
+          "secondary_button_hover_shadow": "#000000",
+          "secondary_button_clicked": "#121212",
+          "secondary_button_clicked_label": "#FFFFFF",
+          "secondary_button_clicked_outline": "#000000",
+          "secondary_button_clicked_shadow": "#000000",
+          "Shadow": "#121212",
+          "color_active": "#000000"
+        }
       }
     }
   },
