@@ -1,0 +1,210 @@
+{{ 'section-slider-offset-center.css' | asset_url | stylesheet_tag }}
+{{ 'slider-offset-center.css' | asset_url | stylesheet_tag }}
+{{ 'https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css' | stylesheet_tag }}
+
+{%- style -%}
+    .section-{{ section.id }}-padding {
+        padding-top: {{ section.settings.padding_top_mobile }}px;
+        padding-bottom: {{ section.settings.padding_bottom_mobile }}px;
+    }
+
+    @media screen and (min-width: 750px) {
+        .section-{{ section.id }}-padding {
+            padding-top: {{ section.settings.padding_top }}px;
+            padding-bottom: {{ section.settings.padding_bottom }}px;
+        }
+    }
+{%- endstyle -%}
+
+{% assign scheme1 = settings.color_schemes | first %}
+
+<div class="offset-center page-width section-{{ section.id }}-padding{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
+    <div class="offset-center__heading">
+        <h2>{{ section.settings.title }}</h2>
+        <p>{{ section.settings.subtitle }}</p>
+    </div>
+
+    <div class="offset-slider__buttons-container">
+        <div class="offset-slider__buttons">
+            <div class="offset-slider-{{ section.id }}-button swiper-button-prev offset-slider__button">
+                <svg width="25" height="25" style="transform: scale(-1,1)" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <mask id="mask0_303_4612" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="25" height="25">
+                        <rect x="0.917114" y="0.735352" width="23.5294" height="23.5294" fill="#D9D9D9"/>
+                    </mask>
+                    <g mask="url(#mask0_303_4612)">
+                        <path d="M17.6611 12.9906H5.81909V12.0102H17.6611L11.9824 6.33152L12.6818 5.6377L19.5446 12.5004L12.6818 19.3632L11.9824 18.6694L17.6611 12.9906Z" fill="#9FA7AF"/>
+                    </g>
+                </svg>
+            </div>
+            <div class="offset-slider-{{ section.id }}-button swiper-button-next offset-slider__button">
+                <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <mask id="mask0_303_4612" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="25" height="25">
+                        <rect x="0.917114" y="0.735352" width="23.5294" height="23.5294" fill="#D9D9D9"/>
+                    </mask>
+                    <g mask="url(#mask0_303_4612)">
+                        <path d="M17.6611 12.9906H5.81909V12.0102H17.6611L11.9824 6.33152L12.6818 5.6377L19.5446 12.5004L12.6818 19.3632L11.9824 18.6694L17.6611 12.9906Z" fill="#9FA7AF"/>
+                    </g>
+                </svg>
+            </div>
+        </div>
+    </div>
+    
+    <div class="swiper offset-slider offset-slider-{{ section.id }}">
+        <div class="swiper-wrapper">
+            {% assign blocksAmount = section.blocks.size | minus: 1 %}
+            {% for i in (0..blocksAmount) %}
+                {% assign block = section.blocks[i] %}
+
+                <div class="offset-slide swiper-slide">
+                    <div class="offset-slide__image-container">
+                        {% if block.settings.image %}
+                            {{ block.settings.image | image_url: width: 610 | image_tag: class: "image-container__image" }}
+                        {% endif %}
+                        <h3 class="image-container__title">{{ block.settings.title }}</h3>
+                        <p class="image-container__subtitle">{{ block.settings.subtitle }}</p>
+                    </div>
+                    <div class="offset-slide__text-container">
+                        <p class="offset-slide__text">{{ block.settings.text }}</p>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
+<!-- Initialize Swiper -->
+<script>
+
+    new Swiper(".offset-slider-{{ section.id }}", {
+        slidesPerView: "auto",
+        // centeredSlides: true,
+        spaceBetween: 20,
+        navigation: {
+            nextEl: ".offset-slider-{{ section.id }}-button.swiper-button-next",
+            prevEl: ".offset-slider-{{ section.id }}-button.swiper-button-prev",
+        },
+    });
+</script>
+
+{% schema %}
+{
+  "name": "Slider center offset",
+  "class": "section",
+  "disabled_on": {
+    "groups": [
+      "header",
+      "footer"
+    ]
+  },
+  "settings": [
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "t:sections.all.colors.label",
+      "default": "background-1"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "default": "Tailored Programming",
+      "label": "Title"
+    },
+    {
+      "type": "text",
+      "id": "subtitle",
+      "default": "Vitality Blueprint helps high performers in every field",
+      "label": "Subtitle"
+    },
+    {
+      "type": "text",
+      "id": "header-btn-label",
+      "default": "View Sample Report",
+      "label": "Button label "
+    },
+    {
+      "type": "text",
+      "id": "header-btn-link",
+      "default": "#",
+      "label": "Button link"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.all.padding.section_padding_heading"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 200,
+      "step": 10,
+      "unit": "px",
+      "label": "Padding top desktop",
+      "default": 80
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 200,
+      "step": 10,
+      "unit": "px",
+      "label": "Padding bottom desktop",
+      "default": 80
+    },
+    {
+      "type": "range",
+      "id": "padding_top_mobile",
+      "min": 0,
+      "max": 200,
+      "step": 5,
+      "unit": "px",
+      "label": "Padding top mobile",
+      "default": 40
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom_mobile",
+      "min": 0,
+      "max": 200,
+      "step": 5,
+      "unit": "px",
+      "label": "Padding bottom mobile",
+      "default": 100
+    }
+  ],
+  "blocks": [
+    {
+      "name": "Block",
+      "type": "block",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "default": "Sean O’Malley",
+          "label": "Title"
+        },
+        {
+          "type": "text",
+          "id": "subtitle",
+          "default": "UFC Champion",
+          "label": "Subtitle"
+        },
+        {
+          "type": "text",
+          "id": "text",
+          "default": "Visit Vitality’s nationwide lab network with over 2,000 locations for a blood draw. ",
+          "label": "Text"
+        },
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,26 @@
+.swiper.offset-slider{
+  overflow: visible;
+}
+
+.swiper-button-prev:after,
+.swiper-button-next:after{
+  display: none;
+}
+
+.offset-slider__buttons .swiper-button-prev,
+.offset-slider__buttons .swiper-button-next{
+  position: static;
+  right: unset;
+  left: unset;
+  width: fit-content;
+  height: fit-content;
+}
+
+.offset-slider__buttons{
+  position: relative;
+  display: flex;
+}
+
+@media screen and (max-width: 751px) {
+  
+}

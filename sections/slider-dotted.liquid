@@ -1,0 +1,263 @@
+{{ 'section-slider-dotted.css' | asset_url | stylesheet_tag }}
+{{ 'slider-dotted.css' | asset_url | stylesheet_tag }}
+{{ 'https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css' | stylesheet_tag }}
+
+{%- style -%}
+    .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top_mobile }}px;
+    padding-bottom: {{ section.settings.padding_bottom_mobile }}px;
+    }
+
+    @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top }}px;
+    padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+    }
+{%- endstyle -%}
+
+{% assign scheme1 = settings.color_schemes | first %}
+
+<div class="slider-dotted page-width section-{{ section.id }}-padding{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
+    <div class="slider-dotted__heading">
+        <h2>{{ section.settings.title }}</h2>
+        <a href="{{ section.settings.header-btn-link }}"
+           class="slider-dotted__secondary-link">{{ section.settings.header-btn-label }}</a>
+    </div>
+
+    <div class="swiper dotted-slider dotted-slider-{{ section.id }}">
+        <div class="swiper-pagination dotted-slider__pagination"></div>
+        <div class="swiper-wrapper">
+            {% assign blocksAmount = section.blocks.size | minus: 1 %}
+            {% for i in (0..blocksAmount) %}
+                {% assign block = section.blocks[i] %}
+
+                <div class="dotted-slide swiper-slide"> 
+                    <div class="dotted-slide__left">
+                        <div class="dotted-slide__text-container">
+                            <div class="dotted-slide__pagination">
+                                <svg width="85" height="85" viewBox="0 0 85 85" fill="none"
+                                     xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="42.5" cy="42.5" r="42" stroke="url(#paint0_linear_302_3172)"/>
+                                    <defs>
+                                    <linearGradient id="paint0_linear_302_3172" x1="5.23874" y1="5.54328e-07"
+                                                    x2="93.8928"
+                                                    y2="71.651"
+                                                    gradientUnits="userSpaceOnUse">
+                                    <stop stop-color="#14D21C"/>
+                                    <stop offset="1" stop-color="#17BBD1"/>
+                                    </linearGradient>
+                                    </defs>
+                                </svg>
+                                <span>{{ i | plus: 1 }}</span>
+                            </div>
+                            <h3 class="dotted-slide__title">{{ block.settings.title }}</h3>
+                            <p class="dotted-slide__text">{{ block.settings.text }}</p>
+                        </div>
+                    </div>
+
+                    {% if block.settings.image %}
+                        {{ block.settings.image | image_url: width: 715 | image_tag: class: "dotted-slide__right-image" }}
+                    {% endif %}
+
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
+<!-- Initialize Swiper -->
+<script>
+    const POST_ACTIVE_BULLET_CLASS = "swiper-pagination-bullet-post-active";
+    var activePaginationStyle;
+
+    function visualActivatePreviousBullets(paginationBullets, activeSlideIndex) {
+        for (let paginationBullet of paginationBullets) {
+            paginationBullet.classList.remove(POST_ACTIVE_BULLET_CLASS);
+        }
+
+        for (let i = 0; i < activeSlideIndex; i++) {
+            paginationBullets[i].classList.add(POST_ACTIVE_BULLET_CLASS);
+        }
+    }
+
+    function setActivePagination(swiper) {
+        let paginationBullets = swiper.pagination.bullets;
+        let activeSlideIndex = swiper.activeIndex;
+
+        activePaginationStyle = paginationBullets[activeSlideIndex].style;
+    }
+
+    let swiper = new Swiper(".dotted-slider-{{ section.id }}", {
+        slidesPerView: 1,
+        centeredSlides: true,
+        effect: "fade",
+        spaceBetween: 20,
+        pagination: {
+            el: ".dotted-slider-{{ section.id }} .swiper-pagination",
+            clickable: true,
+        },
+        autoplay: {
+            delay: 5000,
+            disableOnInteraction: false,
+            stopOnLastSlide: true
+        },
+        on: {
+            init(swiper) {
+                setActivePagination(swiper);
+            },
+            beforeInit: function () {
+                let allSlides = this.slides;
+                for (let i = 0; i < allSlides.length; i++) {
+                    allSlides[i].style.opacity = 0.2;
+                }
+            },
+            slideChange: function () {
+                let allSlides = this.slides;
+                let currentIndex = this.activeIndex;
+                for (let i = 0; i < allSlides.length; i++) {
+                    if (i !== currentIndex) {
+                        allSlides[i].style.opacity = 0.2;
+                    } else {
+                        allSlides[i].style.opacity = 1;
+                    }
+                }
+
+                let paginationBullets = this.pagination.bullets;
+                let activeSlideIndex = this.activeIndex;
+
+                setActivePagination(this);
+                visualActivatePreviousBullets(paginationBullets, activeSlideIndex)
+            },
+            autoplayTimeLeft(s, time, progress) {
+                if (activePaginationStyle) {
+                    activePaginationStyle.setProperty('--fillPercentage', `${(1 - progress) * 100}%`);
+                }
+            }
+        },
+    });
+</script>
+
+{% schema %}
+{
+  "name": "Slider dotted",
+  "class": "section",
+  "disabled_on": {
+    "groups": [
+      "header",
+      "footer"
+    ]
+  },
+  "settings": [
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "t:sections.all.colors.label",
+      "default": "background-1"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "default": "Tailored Programming",
+      "label": "Title"
+    },
+    {
+      "type": "text",
+      "id": "header-btn-label",
+      "default": "View Sample Report",
+      "label": "Button label "
+    },
+    {
+      "type": "text",
+      "id": "header-btn-link",
+      "default": "#",
+      "label": "Button link"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.all.padding.section_padding_heading"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 200,
+      "step": 10,
+      "unit": "px",
+      "label": "Padding top desktop",
+      "default": 80
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 200,
+      "step": 10,
+      "unit": "px",
+      "label": "Padding bottom desktop",
+      "default": 80
+    },
+    {
+      "type": "range",
+      "id": "padding_top_mobile",
+      "min": 0,
+      "max": 200,
+      "step": 5,
+      "unit": "px",
+      "label": "Padding top mobile",
+      "default": 40
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom_mobile",
+      "min": 0,
+      "max": 200,
+      "step": 5,
+      "unit": "px",
+      "label": "Padding bottom mobile",
+      "default": 100
+    }
+  ],
+  "blocks": [
+    {
+      "name": "Block",
+      "type": "block",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "default": "Test",
+          "label": "Title"
+        },
+        {
+          "type": "text",
+          "id": "text",
+          "default": "Visit Vitality’s nationwide lab network with over 2,000 locations for a blood draw. ",
+          "label": "Text"
+        },
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        }
+      ]
+    }
+  ],
+  "default": {
+    "settings": {
+      "title": "Slideshow"
+    },
+    "blocks": [
+      {
+        "type": "block"
+      },
+      {
+        "type": "block"
+      }
+    ]
+  }
+}
+{% endschema %}

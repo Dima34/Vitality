@@ -1,10 +1,66 @@
 {
   "sections": {
-    "text_with_video" : {
-      "type": "text-with-video",
+    "text_with_video_masked": {
+      "type": "text-with-video-masked",
+      "settings" : {
+        "padding_top": 80,
+        "padding_bottom": 80,
+        "padding_top_mobile" : 40,
+        "padding_bottom_mobile" : 80
+      }
+    },
+    "video_heading_text": {
+      "type": "video-heading-text",
+      "settings" : {
+        "padding_top": 80,
+        "padding_bottom": 80,
+        "padding_top_mobile" : 100,
+        "padding_bottom_mobile" : 100
+      }
+    },
+    "text_caption_video": {
+      "type": "text-caption-video",
+      "settings" : {
+        "padding_top": 145,
+        "padding_bottom": 145,
+        "padding_top_mobile" : 100,
+        "padding_bottom_mobile" : 100
+      }
+    },
+    "text_buttons_double_right_card": {
+      "type": "text-buttons-double-right-card",
+      "settings" : {
+        "padding_top": 145,
+        "padding_bottom": 140,
+        "padding_top_mobile" : 100,
+        "padding_bottom_mobile" : 100
+      }
+    },
+    "horizontal_cards": {
+      "type": "horizontal-cards",
       "settings" : {
         "padding_top": 140,
-        "padding_bottom": 140
+        "padding_bottom": 200,
+        "padding_top_mobile" : 100,
+        "padding_bottom_mobile" : 100
+      }
+    },
+    "slider_dotted": {
+      "type": "slider-dotted",
+      "settings" : {
+        "padding_top": 140,
+        "padding_bottom": 140,
+        "padding_top_mobile" : 100,
+        "padding_bottom_mobile" : 100
+      }
+    },
+    "slider_center_offset": {
+      "type": "slider-offset-center",
+      "settings" : {
+        "padding_top": 140,
+        "padding_bottom": 140,
+        "padding_top_mobile" : 100,
+        "padding_bottom_mobile" : 100
       }
     },
     "image_banner": {
@@ -76,7 +132,13 @@
     }
   },
   "order": [
-    "text_with_video",
+    "text_with_video_masked",
+    "video_heading_text",
+    "text_caption_video",
+    "text_buttons_double_right_card",
+    "horizontal_cards",
+    "slider_dotted",
+    "slider_center_offset",
     "image_banner",
     "featured_collection"
   ]

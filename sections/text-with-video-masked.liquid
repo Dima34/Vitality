@@ -1,9 +1,9 @@
-{{ 'section-text-with-video.css' | asset_url | stylesheet_tag }}
+{{ 'section-text-with-video-masked.css' | asset_url | stylesheet_tag }}
 
 {%- style -%}
     .section-{{ section.id }}-padding {
-    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
-    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+    padding-top: {{ section.settings.padding_top_mobile}}px;
+    padding-bottom: {{ section.settings.padding_bottom_mobile}}px;
     }
 
     @media screen and (min-width: 750px) {
@@ -16,14 +16,14 @@
 
 {% assign scheme1 = settings.color_schemes | first %}
 
-<div class="text-with-video page-width section-{{ section.id }}-padding{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
-    <div class="text-with-video__left">
-        <div class="text-with-video__left-text">
+<div class="text-with-video-masked page-width section-{{ section.id }}-padding{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
+    <div class="text-with-video-masked__left">
+        <div class="text-with-video-masked__left-text">
             <h1>{{ section.settings.title }}</h1>
             <p>{{ section.settings.subtitle }}</p>
         </div>
 
-        <div class="text-with-video__button-block">
+        <div class="text-with-video-masked__button-block">
             <a href="{{ section.settings.anchor-link }}" class="button-block_link">
                 <svg width="85" height="85" viewBox="0 0 85 85" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <circle cx="42.5" cy="42.5" r="42" stroke="url(#paint0_linear_84_2834)"/>
@@ -48,29 +48,41 @@
               <p class="small">{{ section.settings.anchor-link-text }}</p>  
             </span>
         </div>
-
     </div>
 
-    <div class="text-with-video__right">
+    <div class="text-with-video-masked__right">
         {% if section.settings.video %}
             {{
             section.settings.video
-            | video_tag: image_size: '715x', loop: section.settings.enable_video_looping, controls: false, muted: true, autoplay: true
+            | video_tag: image_size: '715x', class:"text-with-video-masked__video", loop: true, controls: false, muted: true, autoplay: true
             }}
         {% endif %}
 
-        <svg class="svg">
-            <clipPath id="my-clip-path" clipPathUnits="objectBoundingBox">
-                <path d="M0.264,0.475 C0.351,0.508,0.417,0.591,0.436,0.695 L0.46,0.827 C0.49,0.991,0.663,1,0.772,0.944 C0.88,0.832,0.843,0.628,0.704,0.575 L0.571,0.525 C0.484,0.492,0.418,0.409,0.399,0.305 L0.375,0.173 C0.345,0.009,0.172,-0.056,0.063,0.056 C-0.046,0.168,-0.008,0.372,0.131,0.425 L0.264,0.475 M0.882,0.397 C0.816,0.397,0.763,0.336,0.763,0.261 C0.763,0.186,0.816,0.125,0.882,0.125 C0.947,0.125,1,0.186,1,0.261 C1,0.336,0.947,0.397,0.882,0.397"></path>
+        <svg style="width: 1px; height: 1px; position: absolute">
+            <clipPath id="video-clip-path" clipPathUnits="objectBoundingBox">
+                <path d="M0.263761 0.47465C0.351151 0.507517 0.416634 0.591427 0.435543 0.694772L0.459731 0.826967C0.489724 0.990892 0.662996 1.05606 0.77162 0.944267C0.880244 0.832476 0.842752 0.62757 0.704135 0.575437L0.570959 0.52535C0.483569 0.492483 0.418085 0.408573 0.399176 0.305228L0.374988 0.173033C0.344995 0.00910823 0.171723 -0.0560583 0.0630993 0.055733C-0.0455248 0.167524 -0.00803285 0.37243 0.130585 0.424563L0.263761 0.47465Z"/>
+                <path d="M0.881514 0.397232C0.816076 0.397232 0.763028 0.336313 0.763028 0.261166C0.763028 0.186019 0.816076 0.1251 0.881514 0.1251C0.946952 0.1251 1 0.186019 1 0.261166C1 0.336313 0.946952 0.397232 0.881514 0.397232Z"/>
             </clipPath>
         </svg>
+
+        <svg width="1" height="1" viewBox="0 0 1 1" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g clip-path="url(#clip0_92_3174)">
+                
+            </g>
+            <defs>
+                <clipPath id="clip0_92_3174">
+                    <rect width="1" height="1" fill="white"/>
+                </clipPath>
+            </defs>
+        </svg>
+
 
     </div>
 </div>
 
 {% schema %}
 {
-  "name": "Text with video",
+  "name": "Text with masked video",
   "class": "section",
   "disabled_on": {
     "groups": [
@@ -80,10 +92,15 @@
   },
   "settings": [
     {
+      "type": "header",
+      "content": "Video"
+    },
+    {
       "type": "video",
       "id": "video",
       "label": "Video"
     },
+    
     {
       "type": "color_scheme",
       "id": "color_scheme",
@@ -139,7 +156,7 @@
       "max": 200,
       "step": 10,
       "unit": "px",
-      "label": "t:sections.all.padding.padding_top",
+      "label": "Padding top desktop",
       "default": 80
     },
     {
@@ -149,8 +166,28 @@
       "max": 200,
       "step": 10,
       "unit": "px",
-      "label": "t:sections.all.padding.padding_bottom",
+      "label": "Padding bottom desktop",
       "default": 80
+    },
+    {
+      "type": "range",
+      "id": "padding_top_mobile",
+      "min": 0,
+      "max": 200,
+      "step": 5,
+      "unit": "px",
+      "label": "Padding top mobile",
+      "default": 40
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom_mobile",
+      "min": 0,
+      "max": 200,
+      "step": 5,
+      "unit": "px",
+      "label": "Padding bottom mobile",
+      "default": 100
     }
   ]
 }

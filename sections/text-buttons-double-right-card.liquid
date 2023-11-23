@@ -1,0 +1,269 @@
+{{ 'section-text-buttons-double-right-card.css' | asset_url | stylesheet_tag }}
+
+{%- style -%}
+    .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top_mobile }}px;
+    padding-bottom: {{ section.settings.padding_bottom_mobile }}px;
+    }
+
+    @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top }}px;
+    padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+    }
+{%- endstyle -%}
+
+{% assign scheme1 = settings.color_schemes | first %}
+
+<div class="text-buttons-double-right-card page-width section-{{ section.id }}-padding{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
+    <div class="text-buttons-double-right-card__left">
+        <div class="text-buttons-double-right-card__left-text">
+            <h2>{{ section.settings.title }}</h2>
+            <p>{{ section.settings.subtitle }}</p>
+        </div>
+
+        <div class="text-buttons-double-right-card__button-block">
+            <a href="{{ section.settings.left-link }}"
+               class="button-block__left-button">{{ section.settings.left-link-label }}</a>
+            {% if section.settings.right-link-type == "link" %}
+                <a href="{{ section.settings.right-link }}"
+                   class="button-block__right-button">{{ section.settings.right-link-label }}</a>
+            {% elsif section.settings.right-link-type == "video-popup" %}
+                <button
+                        id="video-button-1-{{- section.id -}}"
+                        class="button-block__right-button "
+                >{{ section.settings.right-link-label }}</button>
+            {% endif %}
+        </div>
+
+        {% capture button-thumb %}
+            <svg width="85" height="86" viewBox="0 0 85 86" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="42.5" cy="43.0879" r="42" stroke="url(#paint0_linear_18_1316)"/>
+                <mask id="mask0_18_1316" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="17" y="18" width="51"
+                      height="51">
+                    <rect x="17.5" y="18.0879" width="50" height="50" fill="#D9D9D9"/>
+                </mask>
+                <g mask="url(#mask0_18_1316)">
+                    <path d="M36.25 53.9052V32.2705L53.2372 43.0879L36.25 53.9052ZM38.3333 50.067L49.3509 43.0879L38.3333 36.1087V50.067Z"
+                          fill="url(#paint1_linear_18_1316)"/>
+                </g>
+                <defs>
+                    <linearGradient id="paint0_linear_18_1316" x1="5.23874" y1="0.587891" x2="93.8928" y2="72.2389"
+                                    gradientUnits="userSpaceOnUse">
+                        <stop stop-color="#14D21C"/>
+                        <stop offset="1" stop-color="#17BBD1"/>
+                    </linearGradient>
+                    <linearGradient id="paint1_linear_18_1316" x1="37.297" y1="32.2705" x2="58.1784" y2="45.5217"
+                                    gradientUnits="userSpaceOnUse">
+                        <stop stop-color="#14D21C"/>
+                        <stop offset="1" stop-color="#17BBD1"/>
+                    </linearGradient>
+                </defs>
+            </svg>
+        {% endcapture %}
+        {% if section.settings.right-link-type == "link" %}
+            <a href="{{ section.settings.right-link }}" class="button-block__button">{{ button-thumb }}</a>
+        {% elsif section.settings.right-link-type == "video-popup" %}
+            <button
+                    id="video-button-3-{{- section.id -}}"
+                    class="button-block__button button-block__right-button "
+            >{{ button-thumb }}</button>
+        {% endif %}
+    </div>
+
+    <div class="text-buttons-double-right-card__right">
+        <div class="text-buttons-double-right-card__right-cards-container">
+            {% for block in section.blocks %}
+                <div class="double-right-card">
+                    {% if block.settings.thumb %}
+                        {% if block.settings.thumb-mobile %}
+                            {{ block.settings.thumb | image_url: width: 300 | image_tag: class: "double-right-card__thumb desktop" }}
+                            {{ block.settings.thumb-mobile | image_url: width: 300 | image_tag: class: "double-right-card__thumb mobile" }}
+                        {% else %}
+                            {{ block.settings.thumb | image_url: width: 300 | image_tag: class: "double-right-card__thumb" }}
+                        {% endif %}
+                    {% endif %}
+
+                    <h3 class="double-right-card__title">{{ block.settings.label }}</h3>
+                </div>
+            {% endfor %}
+        </div>
+        <div class="double-cart__mobile-button-block">
+            <a href="{{ section.settings.left-link }}"
+               class="button-block__left-button">{{ section.settings.left-link-label }}</a>
+            {% if section.settings.right-link-type == "link" %}
+                <a href="{{ section.settings.right-link }}"
+                   class="button-block__right-button">{{ section.settings.right-link-label }}</a>
+            {% elsif section.settings.right-link-type == "video-popup" %}
+                <button
+                        id="video-button-2-{{- section.id -}}"
+                        class="button-block__right-button"
+                >{{ section.settings.right-link-label }}</button>
+            {% endif %}
+        </div>
+    </div>
+</div>
+
+{% if section.settings.right-link-type == "video-popup" %}
+    {% assign btnIds = "video-button-1-" | append: section.id | append: ",video-button-2-" | append: section.id | append: ",video-button-3-" | append: section.id %}
+    {% render 'video-popup', video: section.settings.right-link-video, openBtnIds: btnIds, sectionId: section.id %}
+{% endif %}
+{% schema %}
+{
+  "name": "Text buttons double right",
+  "class": "section",
+  "disabled_on": {
+    "groups": [
+      "header",
+      "footer"
+    ]
+  },
+  "settings": [
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "t:sections.all.colors.label",
+      "default": "background-1"
+    },
+    {
+      "type": "header",
+      "content": "Text section"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "default": "It’s you, in top form.",
+      "label": "Title"
+    },
+    {
+      "type": "text",
+      "id": "subtitle",
+      "default": "Vitality Blueprint is the product of years of proven practice and coaching from <span>Dan Garner</span> and <span>Andy Galpin</span> PhD.",
+      "label": "Subtitle"
+    },
+    {
+      "type": "header",
+      "content": "Left link"
+    },
+    {
+      "type": "text",
+      "id": "left-link",
+      "default": "#",
+      "label": "Link"
+    },
+    {
+      "type": "text",
+      "id": "left-link-label",
+      "default": "Learn More",
+      "label": "Label"
+    },
+    {
+      "type": "header",
+      "content": "Right & top button"
+    },
+    {
+      "type": "text",
+      "id": "right-link-label",
+      "default": "Watch the video",
+      "label": "Label"
+    },
+    {
+      "type": "select",
+      "id": "right-link-type",
+      "label": "Type",
+      "options": [
+        {
+          "value": "link",
+          "label": "Link"
+        },
+        {
+          "value": "video-popup",
+          "label": "Video popup"
+        }
+      ],
+      "default": "link"
+    },
+    {
+      "type": "text",
+      "id": "right-link",
+      "default": "#",
+      "label": "Link"
+    },
+    {
+      "type": "video",
+      "id": "right-link-video",
+      "label": "Video"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.all.padding.section_padding_heading"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 200,
+      "step": 5,
+      "unit": "px",
+      "label": "Padding top desktop",
+      "default": 80
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 200,
+      "step": 5,
+      "unit": "px",
+      "label": "Padding bottom desktop",
+      "default": 80
+    },
+    {
+      "type": "range",
+      "id": "padding_top_mobile",
+      "min": 0,
+      "max": 200,
+      "step": 5,
+      "unit": "px",
+      "label": "Padding top mobile",
+      "default": 40
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom_mobile",
+      "min": 0,
+      "max": 200,
+      "step": 5,
+      "unit": "px",
+      "label": "Padding bottom mobile",
+      "default": 100
+    }
+  ],
+  "max_blocks": 2,
+  "blocks": [
+    {
+      "name": "Card",
+      "type": "card",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "thumb",
+          "label": "Thumb"
+        },
+        {
+          "type": "image_picker",
+          "id": "thumb-mobile",
+          "label": "Mobile thumb"
+        },
+        {
+          "type": "text",
+          "id": "label",
+          "default": "Dan Gardner",
+          "label": "Label"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

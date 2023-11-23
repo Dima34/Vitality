@@ -1,0 +1,115 @@
+.offset-center__heading {
+    width: calc(100% - 240px);
+}
+
+.swiper-slide.offset-slide {
+    width: 295px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.offset-slide__left {
+    padding-left: 60px;
+    padding-bottom: 30px;
+}
+
+.offset-slide__text-container {
+    border-radius: 12px;
+    border: 1px solid #EEF0F6;
+    background: #FFF;
+    box-shadow: 0px 2px 18px 0px rgba(0, 0, 0, 0.05);
+    padding: 30px 40px;
+}
+
+.offset-slide__right-image {
+    width: 100%;
+    height: auto;
+}
+
+
+.offset-slider__buttons-container{
+    display: flex;
+    justify-content: flex-end;
+    margin-top: -35px;
+    margin-bottom: 80px;
+}
+
+.offset-slide__text-container{
+    padding: 20px;
+    height: 100px;
+}
+
+.offset-slide__text{
+    display:inline-block;
+    overflow:hidden;
+    text-overflow: ellipsis;
+}
+
+.offset-slide__image-container,
+.offset-slide__text-container{
+    border-radius: 12px;
+    background: #FFF;
+    box-shadow: 0px 2px 18px 0px rgba(0, 0, 0, 0.05);
+}
+
+.offset-slide__image-container{
+    height: 250px;
+    position: relative;
+    overflow: hidden;
+    padding: 10px 15px;
+}
+
+.image-container__image{
+    position: absolute;
+    object-fit: cover;
+    height: 100%;
+    width: auto;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.image-container__title,
+.image-container__subtitle{
+    z-index: 2;
+    position: relative;
+}
+
+.offset-slide__text-container{
+    background: #F6F7F9;
+}
+
+@media screen and (max-width: 990px) {
+    .swiper-slide.offset-slide {
+        grid-template-columns:1fr 1fr;
+    }
+
+    .offset-slide__left {
+        padding-left: 45px;
+    }
+
+    .offset-slide__text-container {
+        padding: 20px 30px;
+    }
+}
+
+@media screen and (max-width: 751px) {
+    .swiper.offset-slider{
+      overflow: visible;
+    }
+  
+    .swiper-slide.offset-slide {
+        display: flex;
+        flex-direction: column;
+      margin-top: 90px;
+    }
+
+    .offset-slide__left {
+        padding-left: 0px;
+    }
+
+    .offset-slide__text-container {
+        padding: 30px 40px;
+    }
+}

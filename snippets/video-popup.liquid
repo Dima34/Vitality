@@ -1,0 +1,75 @@
+{% comment %}
+  Renders facets (filtering and sorting)
+
+  Accepts:
+  - results: {Object} Collection or Search object
+  - enable_filtering: {Boolean} Show filtering when true
+  - enable_sorting: {Boolean} Show sorting when true
+  - filter_type: {String} Type of filter
+  - paginate: {Object}
+
+  Usage:
+  
+{% assign btnIds = "video-button-1-" | append: section.id | append: ",video-button-2-" | append: section.id | append:",video-button-3-" | append: section.id %}
+
+{% render 'video-popup', video: section.settings.right-link-video, openBtnIds: btnIds, sectionId: section.id %}
+  
+  Then use video-popup="video.mp4 path for button to trigger video open" attribute
+  on button to fire open evt
+{% endcomment %}
+
+{{ 'component-video-popup.css' | asset_url | stylesheet_tag }}
+
+
+{% assign id = "video-popup-" | append: section.id %}
+
+{% assign aspectRatioSecondValue = video.aspect_ratio | split: '.' %}
+{% assign aspectRatio = "aspect-ratio: 1/0." | append: aspectRatioSecondValue[1] %}
+
+<div class="video-popup" id="{{ id }}" style="display:none;">
+    <div class="video-popup__container";>
+        <button class="video-popup__close">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                <path fill="currentColor"
+                      d="M6.4 19L5 17.6l5.6-5.6L5 6.4L6.4 5l5.6 5.6L17.6 5L19 6.4L13.4 12l5.6 5.6l-1.4 1.4l-5.6-5.6L6.4 19Z"/>
+            </svg>
+        </button>
+      <script>console.log({{ video| json }})</script>
+   
+      {{ video | video_tag: controls: true, autoplay: false, style: aspectRatio }}
+    </div>
+</div>
+
+<script>
+
+    let video_popup = document.getElementById("{{ id }}");
+    let video_popup_close = video_popup.querySelector(".video-popup__close");
+    let video_popup_video = video_popup.querySelector("video");
+    let video_popup_container = video_popup.querySelector(".video-popup__container");
+
+    {% assign openBtnIdsObject = openBtnIds | split: ',' %}
+    
+    let ids = [
+        {% for buttonId in openBtnIdsObject %}
+        "{{ buttonId }}",
+        {% endfor %}
+    ]
+    ids.forEach(id => {
+        var el = document.getElementById(id)
+        el.addEventListener("click", () => openVideo(el))
+    })
+
+    video_popup_close.addEventListener("click", _ => {
+        closeVideo()
+    })
+
+    function openVideo() {
+        video_popup.style.display = 'flex';
+        video_popup_video.play();
+    }
+
+    function closeVideo() {
+        video_popup.style.display = 'none';
+        video_popup_video.pause();
+    }
+</script>
