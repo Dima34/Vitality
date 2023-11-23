@@ -8,10 +8,6 @@
   position: static;
 }
 
-.slider-dotted__dotted-slide:not(.slider-dotted__dotted-slide.swiper-slide-active){
-  opacity: 0!important;
-}
-
 .dotted-slider__pagination .swiper-pagination-bullet {
   position: relative;
   top:50%;
