@@ -84,6 +84,43 @@
     },
     "horizontal_cards": {
       "type": "horizontal-cards",
+      "blocks": {
+        "f85e4680-49c5-46c7-a276-64caec134db7": {
+          "type": "block",
+          "settings": {
+            "title": "100+ Biomarkers",
+            "text": "<span>The most comprehensive performance blood panel in the world<\/span> — we assess over 100 biomarkers on their own, in categories, and in performance patterns to build a complete view of you physiology with a bias towards maximizing potential.",
+            "left-image": "shopify:\/\/shop_images\/banner-1.png",
+            "image": "shopify:\/\/shop_images\/image-1.png",
+            "image-mobile": "shopify:\/\/shop_images\/banner-1-mobile.png"
+          }
+        },
+        "f80b9356-bdc1-4835-9057-d97a8df72c9d": {
+          "type": "block",
+          "settings": {
+            "title": "100+ Biomarkers",
+            "text": "<span>The most comprehensive performance blood panel in the world<\/span> — we assess over 100 biomarkers on their own, in categories, and in performance patterns to build a complete view of you physiology with a bias towards maximizing potential.",
+            "left-image": "shopify:\/\/shop_images\/banner-2.png",
+            "image": "shopify:\/\/shop_images\/image-2.png",
+            "image-mobile": "shopify:\/\/shop_images\/banner-2-mobile.png"
+          }
+        },
+        "ff5b8e68-549e-45a3-8c7d-fb8bde97153c": {
+          "type": "block",
+          "settings": {
+            "title": "100+ Biomarkers",
+            "text": "<span>The most comprehensive performance blood panel in the world<\/span> — we assess over 100 biomarkers on their own, in categories, and in performance patterns to build a complete view of you physiology with a bias towards maximizing potential.",
+            "left-image": "shopify:\/\/shop_images\/banner-3.png",
+            "image": "shopify:\/\/shop_images\/image-3.png",
+            "image-mobile": "shopify:\/\/shop_images\/banner-3-mobile.png"
+          }
+        }
+      },
+      "block_order": [
+        "f85e4680-49c5-46c7-a276-64caec134db7",
+        "f80b9356-bdc1-4835-9057-d97a8df72c9d",
+        "ff5b8e68-549e-45a3-8c7d-fb8bde97153c"
+      ],
       "settings": {
         "color_scheme": "",
         "title": "Performance Bloodwork",
