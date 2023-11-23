@@ -109,7 +109,7 @@
           "type": "block",
           "settings": {
             "title": "Vitality Patterns",
-            "text": "Performance categories and patterns go beyond traditional blood panels by classifying biomarkers into thematic groups that influence key areas of performance like <span>sleep<\/span>, <span>focus<span>, and <span>strength<\/span>.  Patterns identify <span>barriers to performance<\/span> indicated by proprietary marker combinations in a straightforward and actionable way.<\/span><\/span>",
+            "text": "Performance categories and patterns go beyond traditional blood panels by classifying biomarkers into thematic groups that influence key areas of performance like <span>sleep<\/span>, <span>focus<\/span>, and <span>strength<\/span>.  Patterns identify <span>barriers to performance<\/span> indicated by proprietary marker combinations in a straightforward and actionable way.",
             "left-image": "shopify:\/\/shop_images\/banner-3.png",
             "image": "shopify:\/\/shop_images\/image-3.png",
             "image-mobile": "shopify:\/\/shop_images\/banner-3-mobile.png"
@@ -136,6 +136,37 @@
     },
     "slider_dotted": {
       "type": "slider-dotted",
+      "blocks": {
+        "53ad02e9-0c64-4533-b738-72372f44cd24": {
+          "type": "block",
+          "settings": {
+            "title": "Test",
+            "text": "Visit Vitality’s nationwide lab network with over 2,000 locations for a blood draw.",
+            "image": "shopify:\/\/shop_images\/slide1.png"
+          }
+        },
+        "ba21685d-27e7-42e3-96da-586720431fc8": {
+          "type": "block",
+          "settings": {
+            "title": "Test",
+            "text": "Visit Vitality’s nationwide lab network with over 2,000 locations for a blood draw.",
+            "image": "shopify:\/\/shop_images\/slide2.png"
+          }
+        },
+        "92ac47ac-124c-4408-a977-29ad6ccb553c": {
+          "type": "block",
+          "settings": {
+            "title": "Test",
+            "text": "Visit Vitality’s nationwide lab network with over 2,000 locations for a blood draw.",
+            "image": "shopify:\/\/shop_images\/slide3.png"
+          }
+        }
+      },
+      "block_order": [
+        "53ad02e9-0c64-4533-b738-72372f44cd24",
+        "ba21685d-27e7-42e3-96da-586720431fc8",
+        "92ac47ac-124c-4408-a977-29ad6ccb553c"
+      ],
       "settings": {
         "color_scheme": "",
         "title": "Tailored Programming",
