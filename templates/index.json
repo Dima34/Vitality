@@ -2,132 +2,238 @@
   "sections": {
     "text_with_video_masked": {
       "type": "text-with-video-masked",
-      "settings" : {
+      "settings": {
+        "video": "shopify:\/\/files\/videos\/1699544037258321.mp4",
+        "color_scheme": "",
+        "title": "Performance Bloodwork",
+        "subtitle": "The science-based bloodwork, analysis and programming chosen by the world’s top athletes and performers to maximize physiological potential",
+        "anchor-link": "#",
+        "anchor-link-title": "Join Vitality",
+        "anchor-link-text": "Join the waitlist to receive an exclusive invitation to Vitality Blueprint",
         "padding_top": 80,
         "padding_bottom": 80,
-        "padding_top_mobile" : 40,
-        "padding_bottom_mobile" : 80
+        "padding_top_mobile": 40,
+        "padding_bottom_mobile": 80
       }
     },
     "video_heading_text": {
       "type": "video-heading-text",
-      "settings" : {
+      "settings": {
+        "video": "shopify:\/\/files\/videos\/line animation.mp4",
+        "color_scheme": "",
+        "title": "Redefine your <span>peak performance<\/span>",
         "padding_top": 80,
         "padding_bottom": 80,
-        "padding_top_mobile" : 100,
-        "padding_bottom_mobile" : 100
+        "padding_top_mobile": 100,
+        "padding_bottom_mobile": 100
       }
     },
     "text_caption_video": {
       "type": "text-caption-video",
-      "settings" : {
+      "settings": {
+        "video": "shopify:\/\/files\/videos\/circle animation.mp4",
+        "color_scheme": "",
+        "title": "Heart rate. Sleep. Recovery. But do you really know if your body is optimized to perform?",
+        "subtitle": "Your watch tells you stats.",
+        "caption": "Vitality Blueprint will uncover your unique physiology and show you a clear path to the next level.",
         "padding_top": 145,
         "padding_bottom": 145,
-        "padding_top_mobile" : 100,
-        "padding_bottom_mobile" : 100
+        "padding_top_mobile": 100,
+        "padding_bottom_mobile": 100
       }
     },
     "text_buttons_double_right_card": {
       "type": "text-buttons-double-right-card",
-      "settings" : {
-        "padding_top": 145,
-        "padding_bottom": 140,
-        "padding_top_mobile" : 100,
-        "padding_bottom_mobile" : 100
-      }
-    },
-    "horizontal_cards": {
-      "type": "horizontal-cards",
-      "settings" : {
-        "padding_top": 140,
-        "padding_bottom": 200,
-        "padding_top_mobile" : 100,
-        "padding_bottom_mobile" : 100
-      }
-    },
-    "slider_dotted": {
-      "type": "slider-dotted",
-      "settings" : {
-        "padding_top": 140,
-        "padding_bottom": 140,
-        "padding_top_mobile" : 100,
-        "padding_bottom_mobile" : 100
-      }
-    },
-    "slider_center_offset": {
-      "type": "slider-offset-center",
-      "settings" : {
-        "padding_top": 140,
-        "padding_bottom": 140,
-        "padding_top_mobile" : 100,
-        "padding_bottom_mobile" : 100
-      }
-    },
-    "image_banner": {
-      "type": "image-banner",
       "blocks": {
-        "heading": {
-          "type": "heading",
+        "b046453b-cb68-44df-91d3-12361f6dbf3d": {
+          "type": "card",
           "settings": {
-            "heading": "Browse our latest products",
-            "heading_size": "h0"
+            "thumb": "shopify:\/\/shop_images\/creator-1.png",
+            "thumb-mobile": "shopify:\/\/shop_images\/owner-1-mobile.png",
+            "label": "Dan Gardner"
           }
         },
-        "button": {
-          "type": "buttons",
+        "16a96649-738a-4655-bb5a-3856f5d2fb6c": {
+          "type": "card",
           "settings": {
-            "button_label_1": "Shop all",
-            "button_link_1": "shopify:\/\/collections\/all",
-            "button_style_secondary_1": true,
-            "button_label_2": "",
-            "button_link_2": "",
-            "button_style_secondary_2": false
+            "thumb": "shopify:\/\/shop_images\/creator-2.png",
+            "thumb-mobile": "shopify:\/\/shop_images\/owner-2-mobile.png",
+            "label": "Andy Galpin"
           }
         }
       },
       "block_order": [
-        "heading",
-        "button"
+        "b046453b-cb68-44df-91d3-12361f6dbf3d",
+        "16a96649-738a-4655-bb5a-3856f5d2fb6c"
       ],
       "settings": {
-        "image_overlay_opacity": 40,
-        "image_height": "large",
-        "desktop_content_position": "bottom-center",
-        "show_text_box": false,
-        "desktop_content_alignment": "center",
-        "color_scheme": "inverse",
-        "image_behavior": "none",
-        "mobile_content_alignment": "center",
-        "stack_images_on_mobile": false,
-        "show_text_below": false
+        "color_scheme": "",
+        "title": "It’s you, in top form.",
+        "subtitle": "Vitality Blueprint is the product of years of proven practice and coaching from <span>Dan Garner<\/span> and <span>Andy Galpin<\/span> PhD.",
+        "left-link": "#",
+        "left-link-label": "Learn More",
+        "right-link-label": "Watch the video",
+        "right-link-type": "video-popup",
+        "right-link": "#",
+        "right-link-video": "shopify:\/\/files\/videos\/1699544037258321.mp4",
+        "padding_top": 145,
+        "padding_bottom": 140,
+        "padding_top_mobile": 100,
+        "padding_bottom_mobile": 100
       }
     },
-    "featured_collection": {
-      "type": "featured-collection",
+    "horizontal_cards": {
+      "type": "horizontal-cards",
+      "blocks": {
+        "f85e4680-49c5-46c7-a276-64caec134db7": {
+          "type": "block",
+          "settings": {
+            "title": "100+ Biomarkers",
+            "text": "<span>The most comprehensive performance blood panel in the world<\/span> — we assess over 100 biomarkers on their own, in categories, and in performance patterns to build a complete view of you physiology with a bias towards maximizing potential.",
+            "left-image": "shopify:\/\/shop_images\/banner-1.png",
+            "image": "shopify:\/\/shop_images\/image-1.png",
+            "image-mobile": "shopify:\/\/shop_images\/banner-1-mobile.png"
+          }
+        },
+        "f80b9356-bdc1-4835-9057-d97a8df72c9d": {
+          "type": "block",
+          "settings": {
+            "title": "Optimal Ranges",
+            "text": "Our tests and ranges are benchmarked against <span>performance individuals<\/span>, not against the population average. Vitality gives you a clear view of <span>world class ranges<span> for your demographic and performance objectives.<\/span><\/span>",
+            "left-image": "shopify:\/\/shop_images\/banner-2.png",
+            "image": "shopify:\/\/shop_images\/image-2.png",
+            "image-mobile": "shopify:\/\/shop_images\/banner-2-mobile.png"
+          }
+        },
+        "ff5b8e68-549e-45a3-8c7d-fb8bde97153c": {
+          "type": "block",
+          "settings": {
+            "title": "Vitality Patterns",
+            "text": "Performance categories and patterns go beyond traditional blood panels by classifying biomarkers into thematic groups that influence key areas of performance like <span>sleep<\/span>, <span>focus<\/span>, and <span>strength<\/span>.  Patterns identify <span>barriers to performance<\/span> indicated by proprietary marker combinations in a straightforward and actionable way.",
+            "left-image": "shopify:\/\/shop_images\/banner-3.png",
+            "image": "shopify:\/\/shop_images\/image-3.png",
+            "image-mobile": "shopify:\/\/shop_images\/banner-3-mobile.png"
+          }
+        }
+      },
+      "block_order": [
+        "f85e4680-49c5-46c7-a276-64caec134db7",
+        "f80b9356-bdc1-4835-9057-d97a8df72c9d",
+        "ff5b8e68-549e-45a3-8c7d-fb8bde97153c"
+      ],
       "settings": {
-        "title": "Featured products",
-        "heading_size": "h2",
-        "description": "",
-        "show_description": false,
-        "description_style": "body",
-        "collection": "all",
-        "products_to_show": 8,
-        "columns_desktop": 4,
-        "full_width": false,
-        "show_view_all": true,
-        "view_all_style": "solid",
-        "enable_desktop_slider": false,
-        "color_scheme": "background-1",
-        "image_ratio": "adapt",
-        "image_shape": "default",
-        "show_secondary_image": true,
-        "show_vendor": false,
-        "show_rating": false,
-        "enable_quick_add": false,
-        "columns_mobile": "2",
-        "swipe_on_mobile": false,
-        "padding_top": 44,
-        "padding_bottom": 36
+        "color_scheme": "",
+        "title": "Performance Bloodwork",
+        "secondary-btn-label": "Learn more",
+        "secondary-btn-link": "#",
+        "primary-btn-label": "Learn more",
+        "primary-btn-link": "#",
+        "padding_top": 140,
+        "padding_bottom": 200,
+        "padding_top_mobile": 100,
+        "padding_bottom_mobile": 100
+      }
+    },
+    "slider_dotted": {
+      "type": "slider-dotted",
+      "blocks": {
+        "53ad02e9-0c64-4533-b738-72372f44cd24": {
+          "type": "block",
+          "settings": {
+            "title": "Test",
+            "text": "Visit Vitality’s nationwide lab network with over 2,000 locations for a blood draw.",
+            "image": "shopify:\/\/shop_images\/slide1.png"
+          }
+        },
+        "ba21685d-27e7-42e3-96da-586720431fc8": {
+          "type": "block",
+          "settings": {
+            "title": "Test",
+            "text": "Visit Vitality’s nationwide lab network with over 2,000 locations for a blood draw.",
+            "image": "shopify:\/\/shop_images\/slide2.png"
+          }
+        },
+        "92ac47ac-124c-4408-a977-29ad6ccb553c": {
+          "type": "block",
+          "settings": {
+            "title": "Test",
+            "text": "Visit Vitality’s nationwide lab network with over 2,000 locations for a blood draw.",
+            "image": "shopify:\/\/shop_images\/slide3.png"
+          }
+        }
+      },
+      "block_order": [
+        "53ad02e9-0c64-4533-b738-72372f44cd24",
+        "ba21685d-27e7-42e3-96da-586720431fc8",
+        "92ac47ac-124c-4408-a977-29ad6ccb553c"
+      ],
+      "settings": {
+        "color_scheme": "",
+        "title": "Tailored Programming",
+        "header-btn-label": "View Sample Report",
+        "header-btn-link": "#",
+        "padding_top": 140,
+        "padding_bottom": 140,
+        "padding_top_mobile": 100,
+        "padding_bottom_mobile": 100
+      }
+    },
+    "slider_center_offset": {
+      "type": "slider-offset-center",
+      "blocks": {
+        "855dbe1c-bfde-4ae7-b3a9-3e2287579a6f": {
+          "type": "block",
+          "settings": {
+            "title": "Sean O’Malley",
+            "subtitle": "UFC Champion",
+            "text": "Visit Vitality’s nationwide lab network with over 2,000 locations for a blood draw.",
+            "image": "shopify:\/\/shop_images\/slider-1.png"
+          }
+        },
+        "08f7ba02-fb13-46f2-a712-32e5a8776284": {
+          "type": "block",
+          "settings": {
+            "title": "Timothy Jones",
+            "subtitle": "Timothy Jones",
+            "text": "Visit Vitality’s nationwide lab network with over 2,000 locations for a blood draw.",
+            "image": "shopify:\/\/shop_images\/slider-2.png"
+          }
+        },
+        "8ccd7f80-130e-4529-aa0e-365af52c554a": {
+          "type": "block",
+          "settings": {
+            "title": "Ryan Bader",
+            "subtitle": "World Heavyweight Champion",
+            "text": "Visit Vitality’s nationwide lab network with over 2,000 locations for a blood draw.",
+            "image": "shopify:\/\/shop_images\/slider-3.png"
+          }
+        },
+        "8f5bb18f-6deb-4ecd-9af3-2184937593c7": {
+          "type": "block",
+          "settings": {
+            "title": "Mark bell",
+            "subtitle": "World Heavyweight Champion",
+            "text": "World Heavyweight Champion",
+            "image": "shopify:\/\/shop_images\/slider-4.png"
+          }
+        }
+      },
+      "block_order": [
+        "855dbe1c-bfde-4ae7-b3a9-3e2287579a6f",
+        "08f7ba02-fb13-46f2-a712-32e5a8776284",
+        "8ccd7f80-130e-4529-aa0e-365af52c554a",
+        "8f5bb18f-6deb-4ecd-9af3-2184937593c7"
+      ],
+      "settings": {
+        "color_scheme": "",
+        "title": "Tailored Programming",
+        "subtitle": "Vitality Blueprint helps high performers in every field",
+        "header-btn-label": "View Sample Report",
+        "header-btn-link": "#",
+        "padding_top": 140,
+        "padding_bottom": 140,
+        "padding_top_mobile": 100,
+        "padding_bottom_mobile": 100
       }
     }
   },
@@ -138,8 +244,6 @@
     "text_buttons_double_right_card",
     "horizontal_cards",
     "slider_dotted",
-    "slider_center_offset",
-    "image_banner",
-    "featured_collection"
+    "slider_center_offset"
   ]
 }
