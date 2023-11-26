@@ -16,6 +16,7 @@
   height: auto;
   display: block;
   position: relative;
+  -webkit-filter: contrast(110%);
 }
 
 .text-caption-video__text{
