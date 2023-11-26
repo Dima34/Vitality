@@ -60,6 +60,9 @@
   margin-bottom: -30px;
 }
 
+.text-with-video-masked__right video::-webkit-media-controls {
+  display:none !important;
+}
 .text-with-video-masked__right{
   aspect-ratio: 712/622;
   margin-bottom: -220px;

@@ -22,6 +22,10 @@ div:has( > .video-heading-text){
   position: relative;
 }
 
+.video-heading-text__left video::-webkit-media-controls {
+  display:none !important;
+}
+
 @media screen and (max-width: 1024px){
   .video-heading-text {
     grid-template-columns: 1fr 1fr;
