@@ -54,7 +54,7 @@
         {% if section.settings.video %}
             {{
             section.settings.video
-            | video_tag: image_size: '715x', class:"text-with-video-masked__video", loop: true, controls: false, muted: true,playsinline:true
+            | video_tag: image_size: '715x', class:"text-with-video-masked__video", loop: true, controls: false, muted: true,playsinline:true, autoplay:true
             }}
         {% endif %}
 
@@ -76,25 +76,6 @@
             </defs>
         </svg>
     </div>
-    <button id="play">play</button>
-    <script>
-        let playBtn = document.querySelector("#play");
-        let video = document.querySelector(".text-with-video-masked__video");
-
-        console.log(playBtn)
-        console.log(video)
-        
-        playBtn.addEventListener("click",()=>{
-            video.play();
-        })
-        
-        // playBtn.click()
-        
-        window.addEventListener("load",()=> {
-            playBtn.click();
-            video.play();
-        })
-    </script>
 </div>
 
 {% schema %}
