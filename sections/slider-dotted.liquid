@@ -32,7 +32,7 @@
             {% for i in (0..blocksAmount) %}
                 {% assign block = section.blocks[i] %}
 
-                <div class="dotted-slide swiper-slide"> 
+                <div class="dotted-slide swiper-slide">
                     <div class="dotted-slide__left">
                         <div class="dotted-slide__text-container">
                             <div class="dotted-slide__pagination">
@@ -40,13 +40,13 @@
                                      xmlns="http://www.w3.org/2000/svg">
                                     <circle cx="42.5" cy="42.5" r="42" stroke="url(#paint0_linear_302_3172)"/>
                                     <defs>
-                                    <linearGradient id="paint0_linear_302_3172" x1="5.23874" y1="5.54328e-07"
-                                                    x2="93.8928"
-                                                    y2="71.651"
-                                                    gradientUnits="userSpaceOnUse">
-                                    <stop stop-color="#14D21C"/>
-                                    <stop offset="1" stop-color="#17BBD1"/>
-                                    </linearGradient>
+                                        <linearGradient id="paint0_linear_302_3172" x1="5.23874" y1="5.54328e-07"
+                                                        x2="93.8928"
+                                                        y2="71.651"
+                                                        gradientUnits="userSpaceOnUse">
+                                            <stop stop-color="#14D21C"/>
+                                            <stop offset="1" stop-color="#17BBD1"/>
+                                        </linearGradient>
                                     </defs>
                                 </svg>
                                 <span class="color-14d font-24-400">{{ i | plus: 1 }}</span>
@@ -91,54 +91,79 @@
         activePaginationStyle = paginationBullets[activeSlideIndex].style;
     }
 
-    let swiper = new Swiper(".dotted-slider-{{ section.id }}", {
-        slidesPerView: 1,
-        centeredSlides: true,
-        effect: "fade",
-        spaceBetween: 20,
-        pagination: {
-            el: ".dotted-slider-{{ section.id }} .swiper-pagination",
-            clickable: true,
-        },
-        autoplay: {
-            delay: 5000,
-            disableOnInteraction: false,
-            stopOnLastSlide: true
-        },
-        on: {
-            init(swiper) {
-                setActivePagination(swiper);
+    function initSwiper() {
+        new Swiper(".dotted-slider-{{ section.id }}", {
+            slidesPerView: 1,
+            centeredSlides: true,
+            effect: "fade",
+            spaceBetween: 20,
+            pagination: {
+                el: ".dotted-slider-{{ section.id }} .swiper-pagination",
+                clickable: true,
             },
-            beforeInit: function () {
-                let allSlides = this.slides;
-                for (let i = 0; i < allSlides.length; i++) {
-                    allSlides[i].style.opacity = 0.2;
-                }
+            autoplay: {
+                delay: 5000,
+                disableOnInteraction: false,
+                stopOnLastSlide: true
             },
-            slideChange: function () {
-                let allSlides = this.slides;
-                let currentIndex = this.activeIndex;
-                for (let i = 0; i < allSlides.length; i++) {
-                    if (i !== currentIndex) {
-                        allSlides[i].style.opacity = 0;
-                    } else {
-                        allSlides[i].style.opacity = 1;
+            on: {
+                init(swiper) {
+                    setActivePagination(swiper);
+                },
+                beforeInit: function () {
+                    let allSlides = this.slides;
+                    for (let i = 0; i < allSlides.length; i++) {
+                        allSlides[i].style.opacity = 0.2;
+                    }
+                },
+                slideChange: function () {
+                    let allSlides = this.slides;
+                    let currentIndex = this.activeIndex;
+                    for (let i = 0; i < allSlides.length; i++) {
+                        if (i !== currentIndex) {
+                            allSlides[i].style.opacity = 0;
+                        } else {
+                            allSlides[i].style.opacity = 1;
+                        }
+                    }
+
+                    let paginationBullets = this.pagination.bullets;
+                    let activeSlideIndex = this.activeIndex;
+
+                    setActivePagination(this);
+                    visualActivatePreviousBullets(paginationBullets, activeSlideIndex)
+                },
+                autoplayTimeLeft(s, time, progress) {
+                    if (activePaginationStyle) {
+                        activePaginationStyle.setProperty('--fillPercentage', `${(1 - progress) * 100}%`);
                     }
                 }
-
-                let paginationBullets = this.pagination.bullets;
-                let activeSlideIndex = this.activeIndex;
-
-                setActivePagination(this);
-                visualActivatePreviousBullets(paginationBullets, activeSlideIndex)
             },
-            autoplayTimeLeft(s, time, progress) {
-                if (activePaginationStyle) {
-                    activePaginationStyle.setProperty('--fillPercentage', `${(1 - progress) * 100}%`);
-                }
+
+
+        });
+        
+    }
+
+    window.addEventListener("load", () => {
+        console.log("page loaded");
+
+        const options = {
+            root: null,
+            // без отступов
+            rootMargin: '0px',
+            threshold: 0
+        }
+
+        let callback = function (entries, observer) {
+            if(entries[0].isIntersecting){
+                initSwiper();
             }
-        },
-    });
+        }
+
+        let observer = new IntersectionObserver(callback, options)
+        observer.observe(document.querySelector(".dotted-slider-{{ section.id }}"));
+    })
 </script>
 
 {% schema %}
