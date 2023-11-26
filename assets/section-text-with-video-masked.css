@@ -24,11 +24,6 @@
 
 .text-with-video-masked__left-text h1{
   color: #000;
-  font-size: 80px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 100.5%;
-  letter-spacing: 2px;
 }
 
 .text-with-video-masked__left-text p{
@@ -88,11 +83,13 @@
     flex-direction: column-reverse;
   }
   
+  .text-with-video-masked__right{
+    margin-bottom: -130px;
+  }
+  
   .text-with-video-masked__video{
     opacity: 0.85;
-    margin-bottom: -130px;
     z-index: -1;
-    width: 452px;
     left: 50%;
     transform: translateX(-50%);
   }

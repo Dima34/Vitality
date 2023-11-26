@@ -19,8 +19,8 @@
 <div class="horizontal-cards page-width section-{{ section.id }}-padding{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
     <div class="horizontal-cards__heading">
         <h2 class="font-50-700 color-1b" >{{ section.settings.title }}</h2>
-        <div class="horizontal-cards__heading-links">
-            <a href="{{ section.settings.primary-btn-link }}" class="heading-links__primary">
+        <div class="horizontal-cards__heading-links ">
+            <a href="{{ section.settings.primary-btn-link }}" class="heading-links__primary button-ternary">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <mask id="mask0_104_2907" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="24"
                           height="24">
@@ -36,7 +36,7 @@
                 </span>
             </a>
             <a href="{{ section.settings.secondary-btn-link }}"
-               class="heading-links__secondary">{{ section.settings.secondary-btn-label }}</a>
+               class="heading-links__secondary button-secondary">{{ section.settings.secondary-btn-label }}</a>
         </div>
     </div>
 

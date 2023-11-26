@@ -3,6 +3,7 @@
     justify-content: space-between;
     gap: 36px;
     margin-bottom: 50px;
+    align-items: center;
 }
 
 .swiper-slide.dotted-slide {
@@ -96,5 +97,18 @@
 
     .dotted-slide__text-container {
         padding: 30px 40px;
+    }
+    
+    .slider-dotted__heading{
+        flex-direction: column;
+    }
+    
+    .slider-dotted__heading h2{
+        width: 100%;
+    }
+
+    .slider-dotted__heading a{
+        width: 100%;
+        text-align: center;
     }
 }

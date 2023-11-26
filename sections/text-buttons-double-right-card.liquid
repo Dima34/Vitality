@@ -25,14 +25,14 @@
 
         <div class="text-buttons-double-right-card__button-block">
             <a href="{{ section.settings.left-link }}"
-               class="button-block__left-button">{{ section.settings.left-link-label }}</a>
+               class="button-block__left-button button-secondary">{{ section.settings.left-link-label }}</a>
             {% if section.settings.right-link-type == "link" %}
                 <a href="{{ section.settings.right-link }}"
-                   class="button-block__right-button">{{ section.settings.right-link-label }}</a>
+                   class="button-block__right-button button-ternary">{{ section.settings.right-link-label }}</a>
             {% elsif section.settings.right-link-type == "video-popup" %}
                 <button
                         id="video-button-1-{{- section.id -}}"
-                        class="button-block__right-button "
+                        class="button-block__right-button button-ternary"
                 >{{ section.settings.right-link-label }}</button>
             {% endif %}
         </div>
@@ -63,11 +63,11 @@
             </svg>
         {% endcapture %}
         {% if section.settings.right-link-type == "link" %}
-            <a href="{{ section.settings.right-link }}" class="button-block__button">{{ button-thumb }}</a>
+            <a href="{{ section.settings.right-link }}" class="button-block__button cursor-pointer hover-opacity-9">{{ button-thumb }}</a>
         {% elsif section.settings.right-link-type == "video-popup" %}
             <button
                     id="video-button-3-{{- section.id -}}"
-                    class="button-block__button button-block__right-button "
+                    class="button-block__button button-block__right-button cursor-pointer hover-opacity-5"
             >{{ button-thumb }}</button>
         {% endif %}
     </div>
@@ -91,14 +91,14 @@
         </div>
         <div class="double-cart__mobile-button-block">
             <a href="{{ section.settings.left-link }}"
-               class="button-block__left-button">{{ section.settings.left-link-label }}</a>
+               class="button-block__left-button button-ternary">{{ section.settings.left-link-label }}</a>
             {% if section.settings.right-link-type == "link" %}
                 <a href="{{ section.settings.right-link }}"
-                   class="button-block__right-button">{{ section.settings.right-link-label }}</a>
+                   class="button-block__right-button button-secondary">{{ section.settings.right-link-label }}</a>
             {% elsif section.settings.right-link-type == "video-popup" %}
                 <button
                         id="video-button-2-{{- section.id -}}"
-                        class="button-block__right-button"
+                        class="button-block__right-button button-secondary"
                 >{{ section.settings.right-link-label }}</button>
             {% endif %}
         </div>

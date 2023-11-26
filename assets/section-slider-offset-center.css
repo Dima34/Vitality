@@ -1,3 +1,7 @@
+div:has(.offset-center){
+    overflow: hidden;
+}
+
 .offset-center__heading {
     width: calc(100% - 240px);
 }
@@ -33,6 +37,7 @@
     justify-content: flex-end;
     margin-top: -35px;
     margin-bottom: 80px;
+    gap: 10px;
 }
 
 .offset-slide__text-container{
@@ -80,6 +85,25 @@
     background: #F6F7F9;
 }
 
+.offset-slider__button{
+    padding: 5px 30px;
+    background: rgba(2, 10, 26, 0.10);
+    background: transparent;
+    border-color: transparent;
+}
+
+.offset-slider__button:hover{
+    background: #F6F7F9;
+    border-color: transparent;
+    box-shadow: none;
+}
+
+.offset-slider__button:active{
+    border: 1px solid #17BBD1;
+    background: #D8F3F7;
+    color: #17BBD1;
+}
+
 @media screen and (max-width: 990px) {
     .swiper-slide.offset-slide {
         grid-template-columns:1fr 1fr;
@@ -95,8 +119,19 @@
 }
 
 @media screen and (max-width: 751px) {
+    .offset-center{
+        display: grid;
+        grid-template-columns: 100%;
+        max-width: 100%;
+    }
+
+    .offset-center__heading{
+        width: 100%;
+    }
+    
     .swiper.offset-slider{
       overflow: visible;
+        max-width: 100%;
     }
   
     .swiper-slide.offset-slide {
@@ -111,5 +146,21 @@
 
     .offset-slide__text-container {
         padding: 30px 40px;
+    }
+
+    .offset-slider__buttons .swiper-button-prev, 
+    .offset-slider__buttons .swiper-button-next{
+        margin-top: 0;
+    }
+    
+    .offset-slider__buttons-container{
+        grid-row: 3/4;
+        margin-bottom: 0;
+        
+        margin-top: 40px;
+    }
+    
+    .swiper-slide.offset-slide{
+        margin-top: 40px;
     }
 }

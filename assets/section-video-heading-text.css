@@ -4,13 +4,15 @@
   margin: 0;
 }
 
+div:has( > .video-heading-text){
+  background: #F6F6F8;
+}
+
 .video-heading-text {
     display: grid;
     grid-template-columns: 1fr 455px;
     column-gap: 70px;
     align-items: center;
-
-  background: #F6F7F9;
 }
 
 .video-heading-text__video{

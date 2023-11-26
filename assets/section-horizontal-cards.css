@@ -16,6 +16,10 @@ h2,p, h3{
   gap: 22px;
 }
 
+.horizontal-cards__heading-links .heading-links__primary svg{
+  margin-right: 5px;
+}
+
 .heading-links__primary{
   display: flex;
   align-items: center;
@@ -98,5 +102,9 @@ h2,p, h3{
     flex-direction: column;
     gap: 10px;
     margin-bottom: 80px;
+  }
+  
+  .horizontal-cards__heading-links .heading-links__primary{
+    padding-left: 0;    
   }
 }

@@ -3551,9 +3551,9 @@ box-shadow: none;
     border-radius: 10px;
     font-size: 14px;
     text-decoration: none;
-    box-shadow: 0px 0px 5px 0px;
     line-height: 16px;
     border: 1px solid #17BBD1;
+    cursor: pointer;
 }
 
 .button-primary {
@@ -3582,9 +3582,9 @@ box-shadow: none;
     border-radius: 10px;
     font-size: 14px;
     text-decoration: none;
-    box-shadow: 0px 0px 5px 0px;
     line-height: 16px;
     border: 1px solid #9FA7AF;
+    cursor: pointer;
 }
 
 .button-secondary {
@@ -3608,12 +3608,16 @@ box-shadow: none;
     box-shadow: none;
 }
 .button-ternary{
+    padding: 9px 30px;
     font-size: 14px;
     text-decoration: none;
     line-height: 16px;
     color: #AECEE1;
     transition: .3s;
     box-sizing: border-box;
+    cursor: pointer;
+    background: 0;
+    border: 0;
 }
 
 .button-ternary:hover {
@@ -3630,6 +3634,14 @@ box-shadow: none;
 
 .text-uppercase{
     text-transform: uppercase;
+}
+
+.cursor-pointer{
+    cursor: pointer;
+}
+
+.hover-opacity-5:hover{
+    opacity: .5;
 }
 
 /*color*/
@@ -3763,11 +3775,11 @@ box-shadow: none;
 }
 
 .font-80-700{
-    font-family: PT Sans;
-    font-size: 80px;
+    font-size: 50px;
+    font-style: normal;
     font-weight: 700;
-    line-height: 100.5%;
-    letter-spacing: 2px;
+    line-height: 110%;
+    letter-spacing: 0.75px;
 }
 
 @media screen and (max-width: 990px){
