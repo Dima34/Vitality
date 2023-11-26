@@ -9,14 +9,14 @@
           "type": "link_list",
           "settings": {
             "heading": "Quick links",
-            "menu": "footer"
+            "menu": "main-menu"
           }
         },
         "a98d98c2-6bbd-4ba7-a229-e77c99b8c1ae": {
           "type": "link_list",
           "settings": {
             "heading": "Quick links",
-            "menu": "footer"
+            "menu": "header"
           }
         },
         "9cb7e893-dbe7-4781-86bf-1d8395d57453": {
