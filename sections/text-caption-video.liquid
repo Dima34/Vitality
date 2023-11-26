@@ -31,7 +31,7 @@
         {% if section.settings.video %}
             {{
             section.settings.video
-            | video_tag: image_size: '300x', class: "text-caption-video__video", loop: true, controls: false, muted: true, autoplay: true, playsinline:true
+            | video_tag: image_size: '300x', class: "text-caption-video__video", controls: false, muted: true, playsinline:true
             }}
         {% endif %}
     </div>
