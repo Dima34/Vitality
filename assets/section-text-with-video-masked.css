@@ -101,5 +101,6 @@
 
   .text-with-video-masked__left{
     gap: 75px;
+    z-index: 2;
   }
 }
