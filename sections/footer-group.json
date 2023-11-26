@@ -4,9 +4,40 @@
   "sections": {
     "footer_new": {
       "type": "footer-new",
+      "blocks": {
+        "b79a87b3-c509-4a22-805e-f849f85d672f": {
+          "type": "link_list",
+          "settings": {
+            "heading": "Quick links",
+            "menu": "footer"
+          }
+        },
+        "a98d98c2-6bbd-4ba7-a229-e77c99b8c1ae": {
+          "type": "link_list",
+          "settings": {
+            "heading": "Quick links",
+            "menu": "footer"
+          }
+        },
+        "9cb7e893-dbe7-4781-86bf-1d8395d57453": {
+          "type": "link_list",
+          "settings": {
+            "heading": "Quick links",
+            "menu": "footer"
+          }
+        }
+      },
+      "block_order": [
+        "b79a87b3-c509-4a22-805e-f849f85d672f",
+        "a98d98c2-6bbd-4ba7-a229-e77c99b8c1ae",
+        "9cb7e893-dbe7-4781-86bf-1d8395d57453"
+      ],
       "settings": {
         "padding_top": 40,
-        "padding_bottom": 16
+        "padding_bottom": 16,
+        "mail-heading": "Subscribe to our newsletter to keep updated on our new features",
+        "mail-button-text": "Subscribe",
+        "mail-form-placeholder": "Email adress"
       }
     }
   },
