@@ -1,0 +1,172 @@
+{{ 'section-three-cards.css' | asset_url | stylesheet_tag }}
+
+{%- style -%}
+    .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top_mobile }}px;
+    padding-bottom: {{ section.settings.padding_bottom_mobile }}px;
+    }
+
+    @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top }}px;
+    padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+    }
+{%- endstyle -%}
+
+{% assign scheme1 = settings.color_schemes | first %}
+
+<div class="three-cards page-width section-{{ section.id }}-padding{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
+    <div class="three-cards__heading">
+        <h2 class="font-50-700 color-1b">{{ section.settings.title }}</h2>
+        <p class="font-20-400 color-5c">{{ section.settings.subtitle }}</p>
+    </div>
+
+    <div class="three-cards__container">
+        {% assign blockIndex = 0 %}
+        {% for card in section.blocks %}
+            {% assign blockIndex = blockIndex | plus: 1 %}
+            {% if blockIndex == 2 %}
+                {% assign isSelected = true %}
+            {% else %}
+                {% assign isSelected = false %}
+            {% endif %}
+
+            <a href="{{ card.settings.block-link }}" class="three-cards__card
+            {% if isSelected %}
+              three-cards__card-selected
+            {% endif %}">
+                {% if isSelected %}
+                    <span class="three-card__selected-label font-18-400">{{ section.settings.selected_card_text }}</span>
+                {% endif %}
+                <h3 class="three-card__title font-40-400 color-1b">{{ card.settings.title }}</h3>
+                <p class="three-card__text font-20-400 color-888">{{ card.settings.text }}</p>
+              {% if card.settings.background %}
+                <span class="three-card__button-text">{{ card.settings.button-text }}</span>
+                {{ card.settings.background | image_url: width: 580 | image_tag: class: "three-card__image"}}
+              {% endif %}
+            </a>
+        {% endfor %}
+    </div>
+</div>
+
+
+{% schema %}
+{
+  "name": "Three blocks section",
+  "class": "section",
+  "disabled_on": {
+    "groups": [
+      "header",
+      "footer"
+    ]
+  },
+  "settings": [
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "t:sections.all.colors.label",
+      "default": "background-1"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "default": "Tailored Programming",
+      "label": "Title"
+    },
+    {
+      "type": "text",
+      "id": "subtitle",
+      "default": "Vitality Blueprint helps high performers in every field",
+      "label": "Subtitle"
+    },
+    {
+      "type": "text",
+      "id": "selected_card_text",
+      "default": "Most Popular",
+      "label": "Selected card text"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.all.padding.section_padding_heading"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 200,
+      "step": 10,
+      "unit": "px",
+      "label": "Padding top desktop",
+      "default": 80
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 200,
+      "step": 10,
+      "unit": "px",
+      "label": "Padding bottom desktop",
+      "default": 80
+    },
+    {
+      "type": "range",
+      "id": "padding_top_mobile",
+      "min": 0,
+      "max": 200,
+      "step": 5,
+      "unit": "px",
+      "label": "Padding top mobile",
+      "default": 40
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom_mobile",
+      "min": 0,
+      "max": 200,
+      "step": 5,
+      "unit": "px",
+      "label": "Padding bottom mobile",
+      "default": 100
+    }
+  ],
+  "blocks": [
+    {
+      "name": "Block",
+      "type": "block",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "default": "Single",
+          "label": "Title"
+        },
+        {
+          "type": "text",
+          "id": "text",
+          "default": "Establish where you stand with an annual checkpoint and personalized performance plan",
+          "label": "Text"
+        },
+        {
+          "type": "text",
+          "id": "button-text",
+          "default": "Learn more",
+          "label": "Button text"
+        },
+        {
+          "type": "text",
+          "id": "block-link",
+          "default": "#",
+          "label": "Block link"
+        },
+        {
+          "type": "image_picker",
+          "id": "background",
+          "label": "Background"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

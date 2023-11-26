@@ -20,7 +20,7 @@
 
 <div class="slider-dotted page-width section-{{ section.id }}-padding{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
     <div class="slider-dotted__heading">
-        <h2>{{ section.settings.title }}</h2>
+        <h2 class="font-50-700 color-1b">{{ section.settings.title }}</h2>
         <a href="{{ section.settings.header-btn-link }}"
            class="slider-dotted__secondary-link">{{ section.settings.header-btn-label }}</a>
     </div>
@@ -49,10 +49,10 @@
                                     </linearGradient>
                                     </defs>
                                 </svg>
-                                <span>{{ i | plus: 1 }}</span>
+                                <span class="color-14d font-24-400">{{ i | plus: 1 }}</span>
                             </div>
-                            <h3 class="dotted-slide__title">{{ block.settings.title }}</h3>
-                            <p class="dotted-slide__text">{{ block.settings.text }}</p>
+                            <h3 class="dotted-slide__title font-40-400 color-ae">{{ block.settings.title }}</h3>
+                            <p class="dotted-slide__text font-20-400 color-000">{{ block.settings.text }}</p>
                         </div>
                     </div>
 

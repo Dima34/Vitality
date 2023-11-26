@@ -19,8 +19,8 @@
 <div class="text-buttons-double-right-card page-width section-{{ section.id }}-padding{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
     <div class="text-buttons-double-right-card__left">
         <div class="text-buttons-double-right-card__left-text">
-            <h2>{{ section.settings.title }}</h2>
-            <p>{{ section.settings.subtitle }}</p>
+            <h2 class="font-50-700 color-1b">{{ section.settings.title }}</h2>
+            <p class="font-20-400 color-888">{{ section.settings.subtitle }}</p>
         </div>
 
         <div class="text-buttons-double-right-card__button-block">
@@ -85,7 +85,7 @@
                         {% endif %}
                     {% endif %}
 
-                    <h3 class="double-right-card__title">{{ block.settings.label }}</h3>
+                    <h3 class="double-right-card__title font-28-700 color-e9">{{ block.settings.label }}</h3>
                 </div>
             {% endfor %}
         </div>
@@ -139,7 +139,7 @@
     {
       "type": "text",
       "id": "subtitle",
-      "default": "Vitality Blueprint is the product of years of proven practice and coaching from <span>Dan Garner</span> and <span>Andy Galpin</span> PhD.",
+      "default": "Vitality Blueprint is the product of years of proven practice and coaching from <span class='color-14d font-24-700'>Dan Garner</span> and <span class='font-24-700 color-14d'>Andy Galpin</span> PhD.",
       "label": "Subtitle"
     },
     {

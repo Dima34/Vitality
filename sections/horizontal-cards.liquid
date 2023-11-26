@@ -18,7 +18,7 @@
 
 <div class="horizontal-cards page-width section-{{ section.id }}-padding{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
     <div class="horizontal-cards__heading">
-        <h2>{{ section.settings.title }}</h2>
+        <h2 class="font-50-700 color-1b" >{{ section.settings.title }}</h2>
         <div class="horizontal-cards__heading-links">
             <a href="{{ section.settings.primary-btn-link }}" class="heading-links__primary">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -47,8 +47,8 @@
             
             <div class="horizontal-cards__horizontal-card active" style="z-index: {{ blocksAmount | minus: i | plus: 1 }};">
                 <div class="horizontal-card__left">
-                    <h3 class="horizontal-card__title">{{ block.settings.title }}</h3>
-                    <p class="horizontal-card__text">{{ block.settings.text }}</p>
+                    <h3 class="horizontal-card__title font-40-400 color-gradient">{{ block.settings.title }}</h3>
+                    <p class="horizontal-card__text font-18-400 color-888">{{ block.settings.text }}</p>
 
                     {% if block.settings.left-image %}
                         {{ block.settings.left-image | image_url: width: 580 | image_tag: class: "horizontal-card__left-image" }}

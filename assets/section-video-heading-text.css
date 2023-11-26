@@ -9,6 +9,8 @@
     grid-template-columns: 1fr 455px;
     column-gap: 70px;
     align-items: center;
+
+  background: #F6F7F9;
 }
 
 .video-heading-text__video{

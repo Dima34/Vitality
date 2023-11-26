@@ -1,0 +1,117 @@
+.three-cards__heading {
+    width: 100%;
+    margin-bottom: 100px;
+}
+
+.three-cards__container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap:20px;
+}
+
+.three-cards__card{
+    border-radius: 12px;
+    border: 1px solid #EEF0F6;
+    background: #FFF;
+    box-shadow: 0px 2px 18px 0px rgba(0, 0, 0, 0.05);
+    padding: 30px 20px 0 20px;
+    background-repeat: no-repeat;
+    background-position: bottom center;
+    background-size: 90% auto;
+    text-decoration: none;
+    position: relative;
+    height: fit-content;
+    transition: .3s;
+}
+
+.three-card__title{
+    color: #1B1B1B;
+    margin-bottom: 30px;
+}
+
+.three-card__text{
+    color: #888888;
+    margin-bottom: 20px;
+}
+
+.three-card__image{
+    padding: 0 30px;
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    display: block;
+}
+
+.three-card__button-text{
+    color: #AECEE1;
+    position: absolute;
+    bottom: 30px;
+    font-size: 14px;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: .3s;
+}
+
+.three-cards__card-selected{
+    margin-top: -40px;
+    height: auto;
+    min-height: fit-content;
+    margin-bottom: -50px;
+    display: flex;
+    flex-direction: column;
+}
+
+.three-cards__card-selected{
+    border: 1px solid  #14D21C;
+}
+
+.three-cards__card-selected .three-card__image{
+    margin-top: auto;
+}
+
+.three-card__selected-label{
+    border-radius: 31px;
+    background: #14D21C;
+    font-size: 18px;
+    color: white;
+    background: #14D21C;
+    text-align: center;
+    display: block;
+    position: absolute;
+    padding: 7px 20px;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    top: -0%;
+    width: max-content;
+    max-width: 100%;
+}
+
+.three-cards__card:hover{
+    border-color: #14D21C;
+    box-shadow: 0px 2px 18px 0px #14D21C70;
+}
+
+.three-cards__card:hover .three-card__button-text{
+    color: rgba(23, 187, 209, 0.50);
+}
+
+.three-cards__card:active .three-card__button-text{
+    color:#17BBD1;
+}
+
+@media screen and (max-width: 990px) {
+
+    .three-cards__container{
+        grid-template-columns:1fr;
+        gap:60px;
+    }
+    
+    .three-cards__card{
+        max-width: 350px;
+        margin: 0 auto;
+    }
+}
+
+@media screen and (max-width: 751px) {
+   
+}

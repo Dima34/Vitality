@@ -19,8 +19,8 @@
 <div class="text-with-video-masked page-width section-{{ section.id }}-padding{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
     <div class="text-with-video-masked__left">
         <div class="text-with-video-masked__left-text">
-            <h1>{{ section.settings.title }}</h1>
-            <p>{{ section.settings.subtitle }}</p>
+            <h1 class="font-80-700 color-000">{{ section.settings.title }}</h1>
+            <p class="font-16-400 color-5c">{{ section.settings.subtitle }}</p>
         </div>
 
         <div class="text-with-video-masked__button-block">
@@ -44,8 +44,8 @@
                 </svg>
             </a>
             <span class="button-block__text-container">
-              <h2>{{ section.settings.anchor-link-title }}</h2>
-              <p class="small">{{ section.settings.anchor-link-text }}</p>  
+              <h2 class="font-20-400 color-gradient">{{ section.settings.anchor-link-title }}</h2>
+              <p class="font-14-400 color-9f">{{ section.settings.anchor-link-text }}</p>  
             </span>
         </div>
     </div>
@@ -75,8 +75,6 @@
                 </clipPath>
             </defs>
         </svg>
-
-
     </div>
 </div>
 

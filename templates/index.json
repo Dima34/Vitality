@@ -3,7 +3,6 @@
     "text_with_video_masked": {
       "type": "text-with-video-masked",
       "settings": {
-        "video": "shopify:\/\/files\/videos\/1699544037258321.mp4",
         "color_scheme": "",
         "title": "Performance Bloodwork",
         "subtitle": "The science-based bloodwork, analysis and programming chosen by the world’s top athletes and performers to maximize physiological potential",
@@ -19,9 +18,8 @@
     "video_heading_text": {
       "type": "video-heading-text",
       "settings": {
-        "video": "shopify:\/\/files\/videos\/line animation.mp4",
         "color_scheme": "",
-        "title": "Redefine your <span>peak performance<\/span>",
+        "title": "Redefine your <span class='color-gradient'>peak performance</span",
         "padding_top": 80,
         "padding_bottom": 80,
         "padding_top_mobile": 100,
@@ -31,7 +29,6 @@
     "text_caption_video": {
       "type": "text-caption-video",
       "settings": {
-        "video": "shopify:\/\/files\/videos\/circle animation.mp4",
         "color_scheme": "",
         "title": "Heart rate. Sleep. Recovery. But do you really know if your body is optimized to perform?",
         "subtitle": "Your watch tells you stats.",
@@ -69,13 +66,12 @@
       "settings": {
         "color_scheme": "",
         "title": "It’s you, in top form.",
-        "subtitle": "Vitality Blueprint is the product of years of proven practice and coaching from <span>Dan Garner<\/span> and <span>Andy Galpin<\/span> PhD.",
+        "subtitle": "Vitality Blueprint is the product of years of proven practice and coaching from <span class='color-14d font-24-700'>Dan Garner</span> and <span class='font-24-700 color-14d'>Andy Galpin</span> PhD.",
         "left-link": "#",
         "left-link-label": "Learn More",
         "right-link-label": "Watch the video",
         "right-link-type": "video-popup",
         "right-link": "#",
-        "right-link-video": "shopify:\/\/files\/videos\/1699544037258321.mp4",
         "padding_top": 145,
         "padding_bottom": 140,
         "padding_top_mobile": 100,
@@ -235,6 +231,62 @@
         "padding_top_mobile": 100,
         "padding_bottom_mobile": 100
       }
+    },
+    "three_cards": {
+      "type": "three-cards",
+      "blocks": {
+        "block_1": {
+          "type": "block",
+          "settings": {
+            "title": "Single",
+            "text": "Establish where you stand with an annual checkpoint and personalized performance plan",
+            "button-text": "Learn more",
+            "block-link": "#"
+          }
+        },
+        "block_2": {
+          "type": "block",
+          "settings": {
+            "title": "Semi-annual",
+            "text": "Re-test at month 6 to track progress and update your performance plan to match your most current opportunities",
+            "button-text": "Learn more",
+            "block-link": "#"
+          }
+        },
+        "block_3": {
+          "type": "block",
+          "settings": {
+            "title": "Single",
+            "text": "Establish where you stand with an annual checkpoint and personalized performance plan",
+            "button-text": "Learn more",
+            "block-link": "#"
+          }
+        }
+      },
+      "block_order": [
+        "block_1",
+        "block_2",
+        "block_3"
+      ],
+      "settings": {
+        "color_scheme": "",
+        "title": "Vitality Blueprint Annual Programs",
+        "subtitle": "Choose the testing frequency that works for you:",
+        "selected_card_text": "Most Popular",
+        "padding_top": 140,
+        "padding_bottom": 140,
+        "padding_top_mobile": 100,
+        "padding_bottom_mobile": 100
+      }
+    },
+    "text_form": {
+      "type": "text-form",
+      "settings": {
+        "padding_top": 140,
+        "padding_bottom": 140,
+        "padding_top_mobile": 100,
+        "padding_bottom_mobile": 100
+      }
     }
   },
   "order": [
@@ -244,6 +296,8 @@
     "text_buttons_double_right_card",
     "horizontal_cards",
     "slider_dotted",
-    "slider_center_offset"
+    "slider_center_offset",
+    "three_cards",
+    "text_form"
   ]
 }

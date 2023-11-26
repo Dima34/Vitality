@@ -20,8 +20,8 @@
 
 <div class="offset-center page-width section-{{ section.id }}-padding{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
     <div class="offset-center__heading">
-        <h2>{{ section.settings.title }}</h2>
-        <p>{{ section.settings.subtitle }}</p>
+        <h2 class="font-50-700 color-1b">{{ section.settings.title }}</h2>
+        <p class="font-20-400 color-5c">{{ section.settings.subtitle }}</p>
     </div>
 
     <div class="offset-slider__buttons-container">
@@ -60,11 +60,11 @@
                         {% if block.settings.image %}
                             {{ block.settings.image | image_url: width: 610 | image_tag: class: "image-container__image" }}
                         {% endif %}
-                        <h3 class="image-container__title">{{ block.settings.title }}</h3>
-                        <p class="image-container__subtitle">{{ block.settings.subtitle }}</p>
+                        <h3 class="image-container__title font-24-400 color-37 text-uppercase">{{ block.settings.title }}</h3>
+                        <p class="image-container__subtitle font-12-400 color-17b">{{ block.settings.subtitle }}</p>
                     </div>
                     <div class="offset-slide__text-container">
-                        <p class="offset-slide__text">{{ block.settings.text }}</p>
+                        <p class="offset-slide__text font-14-400 color-5c">{{ block.settings.text }}</p>
                     </div>
                 </div>
             {% endfor %}
