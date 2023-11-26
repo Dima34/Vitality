@@ -3,6 +3,7 @@
     "text_with_video_masked": {
       "type": "text-with-video-masked",
       "settings": {
+        "video": "shopify:\/\/files\/videos\/1699544037258321.mp4",
         "color_scheme": "",
         "title": "Performance Bloodwork",
         "subtitle": "The science-based bloodwork, analysis and programming chosen by the world’s top athletes and performers to maximize physiological potential",
@@ -18,8 +19,9 @@
     "video_heading_text": {
       "type": "video-heading-text",
       "settings": {
+        "video": "shopify:\/\/files\/videos\/line animation.mp4",
         "color_scheme": "",
-        "title": "Redefine your <span class='color-gradient'>peak performance</span",
+        "title": "Redefine your <span class=\"color-gradient\">peak performance<\/span>",
         "padding_top": 80,
         "padding_bottom": 80,
         "padding_top_mobile": 100,
@@ -29,6 +31,7 @@
     "text_caption_video": {
       "type": "text-caption-video",
       "settings": {
+        "video": "shopify:\/\/files\/videos\/circle animation.mp4",
         "color_scheme": "",
         "title": "Heart rate. Sleep. Recovery. But do you really know if your body is optimized to perform?",
         "subtitle": "Your watch tells you stats.",
@@ -66,7 +69,7 @@
       "settings": {
         "color_scheme": "",
         "title": "It’s you, in top form.",
-        "subtitle": "Vitality Blueprint is the product of years of proven practice and coaching from <span class='color-14d font-24-700'>Dan Garner</span> and <span class='font-24-700 color-14d'>Andy Galpin</span> PhD.",
+        "subtitle": "Vitality Blueprint is the product of years of proven practice and coaching from <span class=\"color-14d font-24-700\">Dan Garner<\/span> and <span class=\"font-24-700 color-14d\">Andy Galpin<\/span> PhD.",
         "left-link": "#",
         "left-link-label": "Learn More",
         "right-link-label": "Watch the video",
@@ -282,6 +285,14 @@
     "text_form": {
       "type": "text-form",
       "settings": {
+        "color_scheme": "",
+        "title": "Ready to go?",
+        "subtitle": "Vitality Blueprint is available beginning in January 2024 Register here for an early invite.",
+        "caption-text": "Turn on your personal performance protocol",
+        "form-title": "Join Vitality",
+        "form-subtitle": "Sign up to save your spot. Refer a friend to move up in line",
+        "form-input-label": "Email address",
+        "form-button-text": "Sing up",
         "padding_top": 140,
         "padding_bottom": 140,
         "padding_top_mobile": 100,

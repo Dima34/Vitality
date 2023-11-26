@@ -1336,7 +1336,7 @@
         "id": "info_copyright",
         "label": "Store copyright",
         "placeholder": "Copyright Vitality Blueprint 2023",
-        "default" : "Copyright Vitality Blueprint 2023"
+        "default": "Copyright Vitality Blueprint 2023"
       }
     ]
   },
@@ -1369,7 +1369,7 @@
         "type": "text",
         "id": "social_linkedin_link",
         "label": "LinkedIn",
-        "placeholder": "https://www.linkedin.com"
+        "placeholder": "https:\/\/www.linkedin.com"
       }
     ]
   },
