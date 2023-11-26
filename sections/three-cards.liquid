@@ -42,7 +42,7 @@
                 <h3 class="three-card__title font-40-400 color-1b">{{ card.settings.title }}</h3>
                 <p class="three-card__text font-20-400 color-888">{{ card.settings.text }}</p>
               {% if card.settings.background %}
-                <span class="three-card__button-text">{{ card.settings.button-text }}</span>
+                <span class="three-card__button-text font-20-400 color-888">{{ card.settings.button-text }}</span>
                 {{ card.settings.background | image_url: width: 580 | image_tag: class: "three-card__image"}}
               {% endif %}
             </a>

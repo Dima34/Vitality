@@ -25,8 +25,8 @@
 }
 
 .three-card__title{
-    color: #1B1B1B;
     margin-bottom: 30px;
+    text-align: center;
 }
 
 .three-card__text{
