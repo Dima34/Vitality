@@ -104,3 +104,7 @@
     z-index: 2;
   }
 }
+
+*::-webkit-media-controls {
+  display:none !important;
+}
