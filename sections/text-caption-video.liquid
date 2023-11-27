@@ -23,7 +23,7 @@
             <h2 class="title font-20-400 color-888">{{ section.settings.title }}</h2>
         </div>
         <div class="text-caption-video__caption">
-          <p class="caption font-28-700">{{ section.settings.caption }}</p>
+            <p class="caption font-28-700">{{ section.settings.caption }}</p>
         </div>
     </div>
 
@@ -31,11 +31,32 @@
         {% if section.settings.video %}
             {{
             section.settings.video
-            | video_tag: image_size: '300x', class: "text-caption-video__video", controls: false, muted: true, playsinline:true
+            | video_tag: image_size: '300x', class: "text-caption-video__video", controls: false, muted: true, playsinline: true
             }}
         {% endif %}
     </div>
 </div>
+
+<script>
+    window.addEventListener("load", () => {
+        const options = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 1
+        }
+
+        let callback = function (entries, observer) {
+            if (entries[0].isIntersecting) {
+                document.querySelector(".text-caption-video__video")?.play();
+                observer.unobserve(elToObserve)
+            }
+        }
+
+        let observer = new IntersectionObserver(callback, options)
+      let elToObserve = document.querySelector(".text-caption-video__right")
+        observer.observe(elToObserve);
+    })
+</script>
 
 {% schema %}
 {
@@ -80,10 +101,10 @@
       "label": "Subtitle"
     },
     {
-    "type": "text",
-    "id": "caption",
-    "default": "Vitality Blueprint will uncover your unique physiology and show you a clear path to the next level.",
-    "label": "Caption"
+      "type": "text",
+      "id": "caption",
+      "default": "Vitality Blueprint will uncover your unique physiology and show you a clear path to the next level.",
+      "label": "Caption"
     },
     {
       "type": "header",

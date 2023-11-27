@@ -2,8 +2,8 @@
 
 {%- style -%}
     .section-{{ section.id }}-padding {
-    padding-top: {{ section.settings.padding_top_mobile}}px;
-    padding-bottom: {{ section.settings.padding_bottom_mobile}}px;
+    padding-top: {{ section.settings.padding_top_mobile }}px;
+    padding-bottom: {{ section.settings.padding_bottom_mobile }}px;
     }
 
     @media screen and (min-width: 750px) {
@@ -21,17 +21,41 @@
         {% if section.settings.video %}
             {{
             section.settings.video
-            | video_tag: image_size: '715x', class:"video-heading-text__video", controls: false, muted: true, playsinline:true
+            | video_tag: image_size: '715x', class: "video-heading-text__video", controls: false, muted: true, playsinline: true
             }}
         {% endif %}
     </div>
-    
+
     <div class="video-heading-text__right">
         <div class="video-heading-text__right-text">
             <h2 class="font-50-700 text-right">{{ section.settings.title }}</h2>
         </div>
     </div>
 </div>
+
+<script>
+    window.addEventListener("load", () => {
+        const options = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 1
+        }
+
+        let callback = function (entries, observer) {
+            if (entries[0].isIntersecting) {
+
+                document.querySelector(".video-heading-text__video")?.play();
+                observer.unobserve(elToObserve)
+
+            }
+        }
+
+        let observer = new IntersectionObserver(callback, options)
+        let elToObserve = document.querySelector(".video-heading-text__left")
+
+        observer.observe(elToObserve);
+    })
+</script>
 
 {% schema %}
 {
@@ -53,7 +77,6 @@
       "id": "video",
       "label": "Video"
     },
-    
     {
       "type": "color_scheme",
       "id": "color_scheme",
