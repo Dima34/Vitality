@@ -7,7 +7,7 @@ div:has(.offset-center){
 }
 
 .swiper-slide.offset-slide {
-    width: 295px;
+    width: 610px;
     display: flex;
     flex-direction: column;
     gap: 20px;
@@ -18,12 +18,21 @@ div:has(.offset-center){
     padding-bottom: 30px;
 }
 
+
+
 .offset-slide__text-container {
     border-radius: 12px;
     border: 1px solid #EEF0F6;
     background: #FFF;
     box-shadow: 0px 2px 18px 0px rgba(0, 0, 0, 0.05);
     padding: 30px 40px;
+    position: relative;
+}
+
+.offset-slide__mark{
+    position: absolute;
+    bottom: -12px;
+    right: 12px;
 }
 
 .offset-slide__right-image {
@@ -115,6 +124,10 @@ div:has(.offset-center){
 
     .offset-slide__text-container {
         padding: 20px 30px;
+    }
+
+    .swiper-slide.offset-slide{
+        width: calc(100vw - 40px);
     }
 }
 
