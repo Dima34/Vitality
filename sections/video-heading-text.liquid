@@ -38,15 +38,13 @@
         const options = {
             root: null,
             rootMargin: '0px',
-            threshold: 0.7
+            threshold: 0.5
         }
 
         let callback = function (entries, observer) {
             if (entries[0].isIntersecting) {
-
                 document.querySelector(".video-heading-text__video")?.play();
                 observer.unobserve(elToObserve)
-
             }
         }
 
