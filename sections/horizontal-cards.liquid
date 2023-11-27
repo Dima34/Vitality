@@ -18,7 +18,7 @@
 
 <div class="horizontal-cards page-width section-{{ section.id }}-padding{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
     <div class="horizontal-cards__heading">
-        <h2 class="font-50-700 color-1b" >{{ section.settings.title }}</h2>
+        <h2 class="font-50-700 color-1b">{{ section.settings.title }}</h2>
         <div class="horizontal-cards__heading-links ">
             <a href="{{ section.settings.primary-btn-link }}" class="heading-links__primary button-ternary">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -41,34 +41,102 @@
     </div>
 
     <div class="horizontal-cards__container">
-        {% assign blocksAmount = section.blocks.size | minus: 1%}
-        {% for i in (0..blocksAmount)  %}
-            {% assign block = section.blocks[i] %}
-            
-            <div class="horizontal-cards__horizontal-card active" style="z-index: {{ blocksAmount | minus: i | plus: 1 }};">
-                <div class="horizontal-card__left">
-                    <h3 class="horizontal-card__title font-40-400 color-gradient">{{ block.settings.title }}</h3>
-                    <p class="horizontal-card__text font-18-400 color-888">{{ block.settings.text }}</p>
+        {% assign blocksAmount = section.blocks.size | minus: 1 %}
+        {% for i in (0..blocksAmount) %}
+            <div style="z-index: {{ blocksAmount | minus: i | plus: 1 }};"
+                 class="horizontal-cards__horizontal-card-container">
 
-                    {% if block.settings.left-image %}
-                        {{ block.settings.left-image | image_url: width: 580 | image_tag: class: "horizontal-card__left-image" }}
-                    {% endif %}
-                </div>
-
-                {% if block.settings.image %}
-                    {{ block.settings.image | image_url: width: 540 | image_tag: class: "horizontal-card__right-image" }}
-                {% endif %}
-
-                {% if block.settings.image-mobile %}
-                    {{ block.settings.image-mobile | image_url: width: 540 | image_tag: class: "horizontal-card__right-image-mobile" }}
-                {% endif %}
             </div>
         {% endfor %}
-        {% for block in section.blocks %}
-            
-        {% endfor %}
+
+        <div class="horizontal-cards__dispencer">
+            {% for i in (0..blocksAmount) %}
+                {% assign block = section.blocks[i] %}
+                <div style="z-index: {{ blocksAmount | minus: i | plus: 1 }};"
+                     class="horizontal-cards__horizontal-card">
+                    <div class="horizontal-card__left">
+                        <h3 class="horizontal-card__title font-40-400 color-gradient">{{ block.settings.title }}</h3>
+                        <p class="horizontal-card__text font-18-400 color-888">{{ block.settings.text }}</p>
+
+                        {% if block.settings.left-image %}
+                            {{ block.settings.left-image | image_url: width: 580 | image_tag: class: "horizontal-card__left-image" }}
+                        {% endif %}
+                    </div>
+
+                    {% if block.settings.image %}
+                        {{ block.settings.image | image_url: width: 540 | image_tag: class: "horizontal-card__right-image" }}
+                    {% endif %}
+
+                    {% if block.settings.image-mobile %}
+                        {{ block.settings.image-mobile | image_url: width: 540 | image_tag: class: "horizontal-card__right-image-mobile" }}
+                    {% endif %}
+                </div>
+            {% endfor %}
+        </div>
     </div>
 </div>
+
+<script>
+
+
+    function getHeight(el) {
+        return getComputedStyle(el).getPropertyValue("height").slice(0, -2);
+    }
+
+    window.addEventListener("load", () => {
+        let cards = document.querySelectorAll(".horizontal-cards__horizontal-card");
+        let cardHolders = document.querySelectorAll(".horizontal-cards__horizontal-card-container");
+        let dispencer = document.querySelector(".horizontal-cards__dispencer");
+
+        // set container size as their potential children size
+        for (var i = 0; i < cardHolders.length; i++) {
+            let cardHeight = parseFloat(getHeight(cards[i]));
+            cardHolders[i].style.height = `${cardHeight}px`;
+        }
+
+        // setup dispencer
+        dispencer.style.height = `${getHeight(cards[0])}px`;
+
+        // make cards same size
+        for (var i = 0; i < cards.length; i++) {
+            let card = cards[i];
+            card.dataset["oldHeight"] = getHeight(card);
+            card.style.height = `${getHeight(cards[0])}px`;
+        }
+
+        const options = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.15
+        }
+
+        let cardHoldersArray = Array.from(cardHolders)
+
+        let callback = function (entries, observer) {
+            let entry = entries[0];
+
+            if (entry.isIntersecting) {
+                let cartHolderIndex = cardHoldersArray.indexOf(entry.target)
+                cardHolders[cartHolderIndex].appendChild(dispencer.childNodes[0])
+                cardHolders[cartHolderIndex].appendChild(dispencer.childNodes[0])
+                
+                let addedChild = cardHolders[cartHolderIndex].childNodes[0];
+                console.log(addedChild)
+
+                let offset = entry.target.offsetTop;
+                dispencer.style.top = offset + "px";
+
+                observer.unobserve(entry.target)
+            }
+        }
+
+        let observer = new IntersectionObserver(callback, options)
+
+        for (let i = 0; i < cardHolders.length; i++) {
+            observer.observe(cardHolders[i]);
+        }
+    })
+</script>
 
 {% schema %}
 {

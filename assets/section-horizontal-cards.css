@@ -25,7 +25,27 @@ h2,p, h3{
   align-items: center;
 }
 
+.horizontal-cards__horizontal-card-container{
+  margin-top: 230px;
+  position: relative;
+}
+
+.horizontal-cards__container{
+  position: relative;
+  transition: .6s;
+}
+
+.horizontal-cards__dispencer{
+  position: relative;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: -1;
+  transition: .6s;
+}
+
 .horizontal-cards__horizontal-card{
+  
   display: grid;
   grid-template-columns: 1fr 1fr;
   column-gap: 55px;
@@ -34,17 +54,25 @@ h2,p, h3{
   border: 1px solid #EEF0F6;
   background: #FFF;
   box-shadow: 0px 2px 18px 0px rgba(0, 0, 0, 0.05);
-  margin-top: -180px;
+
+  position: relative;
+  transition: .3s;
+  
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
 }
 
-.horizontal-cards__horizontal-card:last-child,
-.horizontal-cards__horizontal-card:first-child.active
+.horizontal-cards__horizontal-card-container:first-child,
+.horizontal-cards__horizontal-card-container:first-child.active
 {
   margin-top: 0;
 }
 
 .horizontal-cards__horizontal-card.active{
-  margin-top: 230px;
+  top: 0!important;
 }
 
 .horizontal-card__title{
@@ -59,6 +87,7 @@ h2,p, h3{
   border-radius: 6px;
   width: 100%;
   height: auto;
+  display: block;
 }
 
 .horizontal-card__right-image-mobile{
@@ -68,6 +97,7 @@ h2,p, h3{
 .horizontal-card__left-image{
   width: 100%;
   height: auto;
+  display: block;
 }
 
 @media screen and (max-width: 751px) {
