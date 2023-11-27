@@ -34,17 +34,14 @@ h2,p, h3{
   border: 1px solid #EEF0F6;
   background: #FFF;
   box-shadow: 0px 2px 18px 0px rgba(0, 0, 0, 0.05);
-  margin-top: -180px;
-}
-
-.horizontal-cards__horizontal-card:last-child,
-.horizontal-cards__horizontal-card:first-child.active
-{
-  margin-top: 0;
+  margin-top: 230px;
+  opacity: 0;
+ transition: opacity .6s;
+  transition-delay: .15s;
 }
 
 .horizontal-cards__horizontal-card.active{
-  margin-top: 230px;
+  opacity: 1;
 }
 
 .horizontal-card__title{

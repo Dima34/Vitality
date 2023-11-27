@@ -45,7 +45,7 @@
         {% for i in (0..blocksAmount)  %}
             {% assign block = section.blocks[i] %}
             
-            <div class="horizontal-cards__horizontal-card active" style="z-index: {{ blocksAmount | minus: i | plus: 1 }};">
+            <div class="horizontal-cards__horizontal-card" style="z-index: {{ blocksAmount | minus: i | plus: 1 }};">
                 <div class="horizontal-card__left">
                     <h3 class="horizontal-card__title font-40-400 color-gradient">{{ block.settings.title }}</h3>
                     <p class="horizontal-card__text font-18-400 color-888">{{ block.settings.text }}</p>
@@ -69,6 +69,29 @@
         {% endfor %}
     </div>
 </div>
+
+<script>
+    window.addEventListener("load", () => {
+        let cards = document.querySelectorAll(".horizontal-cards__horizontal-card")
+        
+        const options = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.3
+        }
+
+        let callback = function (entries, observer) {
+            if (entries[0].isIntersecting) {
+                entries[0].target.classList.add("active")
+                observer.unobserve(elToObserve);
+            }
+        }
+
+        let observer = new IntersectionObserver(callback, options)
+        
+        cards.forEach(x=>observer.observe(x));
+    })
+</script>
 
 {% schema %}
 {
