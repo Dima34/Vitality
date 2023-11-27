@@ -21,9 +21,15 @@
             {% if s.footer-logo %}
                 {{ s.footer-logo | image_url: width: 160 | image_tag }}
             {% endif %}
-            <p class="footer__copyright">{{ s.info_copyright }}</p>
+            {% if s.info_copyright %}
+                <p class="footer__copyright">{{ s.info_copyright }}</p>
+            {% endif %}
         </div>
         <div class="footer__info">
+            {% if s.info_copyright %}
+                <p class="footer__copyright-mobile">{{ s.info_copyright }}</p>
+            {% endif %}
+
             {% if s.info_phone %}
                 <a class="footer__info-link" href="tel:{{ s.info_phone }}">
                     <svg xmlns="http://www.w3.org/2000/svg" width="15" height="16" viewBox="0 0 15 16" fill="none">

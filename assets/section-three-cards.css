@@ -106,9 +106,17 @@
         gap:60px;
     }
     
+    .three-cards__card-selected{
+        grid-row: 1/2;
+    }
+    
     .three-cards__card{
         max-width: 350px;
         margin: 0 auto;
+    }
+    
+    .three-card__text{
+        text-align: center;
     }
 }
 

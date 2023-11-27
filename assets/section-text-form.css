@@ -82,6 +82,16 @@
     margin-bottom: 20px;
 }
 
+.text-form__right form input::placeholder{
+    color: #C1C1C1;
+}
+
+.text-form__right form input:focus{
+    outline: none;
+    box-shadow: none;
+    border-color: #C1C1C1;
+}
+
 @media screen and (max-width: 990px) {
     .text-form__container{
         grid-template-columns: 1fr;
