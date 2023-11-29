@@ -82,10 +82,8 @@
 
         let callback = function (entries, observer) {
             if (entries[0].isIntersecting) {
-                let observedElement = entries[0].target;
-                observedElement.classList.add("active")
-                
-                observer.unobserve(observedElement);
+                entries[0].target.classList.add("active")
+                observer.unobserve(elToObserve);
             }
         }
 

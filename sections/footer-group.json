@@ -27,8 +27,6 @@
       "settings": {
         "padding_top": 40,
         "padding_bottom": 16,
-        "padding_top_mobile": 36,
-        "padding_bottom_mobile": 40,
         "mail-heading": "Subscribe to our newsletter to keep updated on our new features",
         "mail-button-text": "Subscribe",
         "mail-form-placeholder": "Email adress"
