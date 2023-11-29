@@ -18,31 +18,17 @@
             "heading": "Other links",
             "menu": "footer"
           }
-        },
-        "bc1f011c-bf85-4cd3-a58f-0e4a65098e9c": {
-          "type": "link_list",
-          "settings": {
-            "heading": "Overloaded menu item suuuperOverlodeddd!",
-            "menu": "overloaded-menu-test"
-          }
-        },
-        "06ded67c-f183-4aac-857c-e6afc0c7be87": {
-          "type": "link_list",
-          "settings": {
-            "heading": "The second addition menu item",
-            "menu": "overloaded-menu-test"
-          }
         }
       },
       "block_order": [
         "b79a87b3-c509-4a22-805e-f849f85d672f",
-        "9cb7e893-dbe7-4781-86bf-1d8395d57453",
-        "bc1f011c-bf85-4cd3-a58f-0e4a65098e9c",
-        "06ded67c-f183-4aac-857c-e6afc0c7be87"
+        "9cb7e893-dbe7-4781-86bf-1d8395d57453"
       ],
       "settings": {
         "padding_top": 40,
         "padding_bottom": 16,
+        "padding_top_mobile": 36,
+        "padding_bottom_mobile": 40,
         "mail-heading": "Subscribe to our newsletter to keep updated on our new features",
         "mail-button-text": "Subscribe",
         "mail-form-placeholder": "Email adress"
