@@ -29,6 +29,13 @@ div:has(.offset-center){
     position: relative;
 }
 
+.offset-slide__text-container p{
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+} 
+
 .offset-slide__mark{
     position: absolute;
     bottom: -12px;
