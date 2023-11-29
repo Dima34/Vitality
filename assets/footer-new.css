@@ -101,6 +101,7 @@ background-color:#37393B ;
     grid-auto-flow: dense;
     direction: rtl;
     text-align: left;
+    max-width: 510px;
 }
 
 .footer__link-list{
