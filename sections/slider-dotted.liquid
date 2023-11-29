@@ -51,7 +51,7 @@
                                 </svg>
                                 <span class="color-14d font-24-400">{{ i | plus: 1 }}</span>
                             </div>
-                            <h3 class="dotted-slide__title font-40-400 color-ae">{{ block.settings.title }}</h3>
+                            <h3 class="dotted-slide__title font-40-400" style="{{ block.settings.title_style }}">{{ block.settings.title }}</h3>
                             <p class="dotted-slide__text font-20-400 color-000">{{ block.settings.text }}</p>
                         </div>
                     </div>
@@ -255,6 +255,12 @@
           "id": "title",
           "default": "Test",
           "label": "Title"
+        },
+        {
+          "type": "text",
+          "id": "title_style",
+          "default": "background: linear-gradient(129deg, #14D21C 3.41%, #17BBD1 98.77%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;",
+          "label": "Title styles"
         },
         {
           "type": "text",
