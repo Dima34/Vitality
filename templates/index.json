@@ -3,7 +3,7 @@
     "text_with_video_masked": {
       "type": "text-with-video-masked",
       "settings": {
-        "video": "shopify:\/\/files\/videos\/1699544037258321.mp4",
+        "video": "shopify:\/\/files\/videos\/ezgif.com-video-to-gif.mp4",
         "color_scheme": "",
         "title": "Performance Bloodwork",
         "subtitle": "The science-based bloodwork, analysis and programming chosen by the world’s top athletes and performers to maximize physiological potential",
@@ -73,9 +73,8 @@
         "left-link": "#",
         "left-link-label": "Learn More",
         "right-link-label": "Watch the video",
-        "right-link-type": "video-popup",
+        "right-link-type": "link",
         "right-link": "#",
-        "right-link-video": "shopify:\/\/files\/videos\/1699544037258321.mp4",
         "padding_top": 50,
         "padding_bottom": 140,
         "padding_top_mobile": 100,
@@ -129,9 +128,9 @@
         "primary-btn-label": "Learn more",
         "primary-btn-link": "#",
         "padding_top": 140,
-        "padding_bottom": 200,
+        "padding_bottom": 50,
         "padding_top_mobile": 100,
-        "padding_bottom_mobile": 100
+        "padding_bottom_mobile": 50
       }
     },
     "slider_dotted": {
@@ -141,23 +140,26 @@
           "type": "block",
           "settings": {
             "title": "Test",
+            "title_style": "color: #AECEE1",
             "text": "Visit Vitality’s nationwide lab network with over 2,000 locations for a blood draw.",
-            "image": "shopify:\/\/shop_images\/slide1.png"
+            "image": "shopify:\/\/shop_images\/slide1_cffebe49-f676-46a7-bd75-3810d08fdb33.png"
           }
         },
         "ba21685d-27e7-42e3-96da-586720431fc8": {
           "type": "block",
           "settings": {
-            "title": "Test",
-            "text": "Visit Vitality’s nationwide lab network with over 2,000 locations for a blood draw.",
+            "title": "Analyze",
+            "title_style": "color: #17BBD1;",
+            "text": "Then, Vitality gets to work looking at over 100 biomarkers, assessing markers individually and in proprietary categories and combinations.  Your panels and results automatically flow into your personalized performance dashboard (view a sample).",
             "image": "shopify:\/\/shop_images\/slide2.png"
           }
         },
         "92ac47ac-124c-4408-a977-29ad6ccb553c": {
           "type": "block",
           "settings": {
-            "title": "Test",
-            "text": "Visit Vitality’s nationwide lab network with over 2,000 locations for a blood draw.",
+            "title": "Improve",
+            "title_style": "background: linear-gradient(129deg, #14D21C 3.41%, #17BBD1 98.77%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;",
+            "text": "Individual biomarkers and multi-factor patterns identify and classify the largest constraints to your personal performance and show you how to address and remove each constraint through specific nutritional, lifestyle, and activity recommendations.   Re-testing lets you visualize progress and maintain programming sensitive to the latest changes in your body.",
             "image": "shopify:\/\/shop_images\/slide3.png"
           }
         }
@@ -173,9 +175,9 @@
         "header-btn-label": "View Sample Report",
         "header-btn-link": "#",
         "padding_top": 140,
-        "padding_bottom": 140,
+        "padding_bottom": 50,
         "padding_top_mobile": 100,
-        "padding_bottom_mobile": 100
+        "padding_bottom_mobile": 50
       }
     },
     "slider_center_offset": {
@@ -186,7 +188,7 @@
           "settings": {
             "title": "Sean O’Malley",
             "subtitle": "UFC Champion",
-            "text": "Visit Vitality’s nationwide lab network with over 2,000 locations for a blood draw.",
+            "text": "After years of unsuccessfully trying to “decode” myself, I’m so very grateful to be working with the team now. The results exceeded my already high expectations. I really can’t put all the emotions into words.",
             "image": "shopify:\/\/shop_images\/slider-1.png"
           }
         },
@@ -194,8 +196,8 @@
           "type": "block",
           "settings": {
             "title": "Timothy Jones",
-            "subtitle": "Timothy Jones",
-            "text": "Visit Vitality’s nationwide lab network with over 2,000 locations for a blood draw.",
+            "subtitle": "CEO, Precision<br> Nutrition",
+            "text": "Engaging Vitality marked a transformative chapter in my personal and professional life.  Facing a major injury at 47, which took a toll on me mentally, physically, and emotionally, Dan's intervention was crucial. His expertise in blood lab analysis led to personalized, life-revitalizing strategies.  Today, my thinking is sharper, and I've seen a significant uplift in my decision-making skills, energy levels, and engagement in professional and family life. Remarkably, my productivity has skyrocketed, and I feel in the prime of my health, confidently training alongside those 20 years my junior.",
             "image": "shopify:\/\/shop_images\/slider-2.png"
           }
         },
@@ -203,8 +205,8 @@
           "type": "block",
           "settings": {
             "title": "Ryan Bader",
-            "subtitle": "World Heavyweight Champion",
-            "text": "Visit Vitality’s nationwide lab network with over 2,000 locations for a blood draw.",
+            "subtitle": "World Heavyweight <br>Champion",
+            "text": "I worked with Dan Garner and the Vitality team for a couple title fights and I wish I had known about him earlier. His process was so thorough and comprehensive, beyond anything I have done before. It was my first deep dive into my biology. Previously I had covered all my basis as far training etc, this was one area of improvement that I could utilize and take myself to the next level. This will not only elevate an athletes career but will elevate anyones life!",
             "image": "shopify:\/\/shop_images\/slider-3.png"
           }
         },
@@ -213,7 +215,7 @@
           "settings": {
             "title": "Mark bell",
             "subtitle": "World Heavyweight Champion",
-            "text": "World Heavyweight Champion",
+            "text": "Just did a physical and had a blood panel done. Massive Improvements!! I haven’t had a fasting glucose below 98 and cholesterol under 200 since I started getting my labs done in the US. Just did a physical and had a blood panel done. Massive Improvements!! I really can’t put all the emotions into words.",
             "image": "shopify:\/\/shop_images\/slider-4.png"
           }
         }
