@@ -1,8 +1,9 @@
 {
   "current": {
-    "logo": "shopify:\/\/shop_images\/logo.png",
+    "logo": "shopify:\/\/shop_images\/vitality-logo-hq.png",
     "logo_width": 140,
-    "logo_mobile": "shopify:\/\/shop_images\/logo-mobile.png",
+    "favicon": "shopify:\/\/shop_images\/vitality-mobile-logo-hq.png",
+    "logo_mobile": "shopify:\/\/shop_images\/vitality-mobile-logo-hq.png",
     "footer-logo": "shopify:\/\/shop_images\/footer-logo.png",
     "type_header_font": "pt_sans_n4",
     "heading_scale": 100,
