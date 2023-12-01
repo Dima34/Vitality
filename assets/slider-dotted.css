@@ -16,10 +16,12 @@
   background: #F6F7F9;
   opacity: 1 !important;
   display: flex;
+  border-radius: 0;
 }
 
 .dotted-slider__pagination .swiper-pagination-bullet:last-child{
-  width: 20px;
+  margin: 0;
+  width: 15px;
 }
 
 .dotted-slider__pagination .swiper-pagination-bullet::after {
