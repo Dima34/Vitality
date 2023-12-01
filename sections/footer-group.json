@@ -5,24 +5,32 @@
     "footer_new": {
       "type": "footer-new",
       "blocks": {
-        "b79a87b3-c509-4a22-805e-f849f85d672f": {
+        "b63a7a46-4549-469a-bf04-74417ff6d8ad": {
           "type": "link_list",
           "settings": {
-            "heading": "Main menu",
-            "menu": "main-menu"
+            "heading": "Legal",
+            "menu": "legal"
           }
         },
         "9cb7e893-dbe7-4781-86bf-1d8395d57453": {
           "type": "link_list",
           "settings": {
-            "heading": "Other links",
-            "menu": "footer"
+            "heading": "Company",
+            "menu": "company"
+          }
+        },
+        "b79a87b3-c509-4a22-805e-f849f85d672f": {
+          "type": "link_list",
+          "settings": {
+            "heading": "Product",
+            "menu": "product"
           }
         }
       },
       "block_order": [
-        "b79a87b3-c509-4a22-805e-f849f85d672f",
-        "9cb7e893-dbe7-4781-86bf-1d8395d57453"
+        "b63a7a46-4549-469a-bf04-74417ff6d8ad",
+        "9cb7e893-dbe7-4781-86bf-1d8395d57453",
+        "b79a87b3-c509-4a22-805e-f849f85d672f"
       ],
       "settings": {
         "padding_top": 40,
