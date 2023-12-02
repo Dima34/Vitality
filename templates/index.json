@@ -23,7 +23,7 @@
         "color_scheme": "",
         "title": "Redefine your <span class=\"color-gradient\">peak performance<\/span>",
         "padding_top": 80,
-        "padding_bottom": 80,
+        "padding_bottom": 100,
         "padding_top_mobile": 100,
         "padding_bottom_mobile": 100
       }
@@ -37,7 +37,7 @@
         "subtitle": "Your watch tells you stats.",
         "caption": "Vitality Blueprint will uncover your unique physiology and show you a clear path to the next level.",
         "padding_top": 145,
-        "padding_bottom": 30,
+        "padding_bottom": 60,
         "padding_top_mobile": 100,
         "padding_bottom_mobile": 0
       }
@@ -76,7 +76,7 @@
         "right-link-type": "link",
         "right-link": "#",
         "padding_top": 50,
-        "padding_bottom": 40,
+        "padding_bottom": 60,
         "padding_top_mobile": 100,
         "padding_bottom_mobile": 0
       }
@@ -175,7 +175,7 @@
         "header-btn-label": "View Sample Report",
         "header-btn-link": "#",
         "padding_top": 140,
-        "padding_bottom": 50,
+        "padding_bottom": 0,
         "padding_top_mobile": 100,
         "padding_bottom_mobile": 50
       }
@@ -233,7 +233,7 @@
         "header-btn-label": "View Sample Report",
         "header-btn-link": "#",
         "padding_top": 140,
-        "padding_bottom": 140,
+        "padding_bottom": 60,
         "padding_top_mobile": 100,
         "padding_bottom_mobile": 100
       }
@@ -283,7 +283,7 @@
         "subtitle": "Choose the testing frequency that works for you:",
         "selected_card_text": "Most Popular",
         "padding_top": 140,
-        "padding_bottom": 140,
+        "padding_bottom": 100,
         "padding_top_mobile": 100,
         "padding_bottom_mobile": 100
       }
