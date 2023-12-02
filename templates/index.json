@@ -248,7 +248,7 @@
             "text": "Establish where you stand with an annual checkpoint and personalized performance plan",
             "button-text": "Learn more",
             "block-link": "#",
-            "background": "shopify:\/\/shop_images\/plan-1.png"
+            "background": "shopify:\/\/shop_images\/plan_1.png"
           }
         },
         "block_2": {
@@ -258,7 +258,7 @@
             "text": "Re-test at month 6 to track progress and update your performance plan to match your most current opportunities",
             "button-text": "Learn more",
             "block-link": "#",
-            "background": "shopify:\/\/shop_images\/plan-2.png"
+            "background": "shopify:\/\/shop_images\/plan_2.png"
           }
         },
         "block_3": {
@@ -268,7 +268,7 @@
             "text": "Lock-in a near realtime view of your physiology and identify fresh programming each quarter",
             "button-text": "Learn more",
             "block-link": "#",
-            "background": "shopify:\/\/shop_images\/plan-3.png"
+            "background": "shopify:\/\/shop_images\/plan_3.png"
           }
         }
       },
