@@ -37,7 +37,7 @@
         "subtitle": "Your watch tells you stats.",
         "caption": "Vitality Blueprint will uncover your unique physiology and show you a clear path to the next level.",
         "padding_top": 145,
-        "padding_bottom": 0,
+        "padding_bottom": 30,
         "padding_top_mobile": 100,
         "padding_bottom_mobile": 0
       }
