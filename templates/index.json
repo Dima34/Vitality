@@ -76,9 +76,9 @@
         "right-link-type": "link",
         "right-link": "#",
         "padding_top": 50,
-        "padding_bottom": 140,
+        "padding_bottom": 40,
         "padding_top_mobile": 100,
-        "padding_bottom_mobile": 100
+        "padding_bottom_mobile": 0
       }
     },
     "horizontal_cards": {
