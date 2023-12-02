@@ -3510,6 +3510,9 @@ details-disclosure > details {
     
     .header__heading-logo-mobile{
         display: block;
+        max-width: 45px;
+        width: 100%;
+        height: auto;
     }
     
     header-drawer{
