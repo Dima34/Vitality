@@ -57,7 +57,7 @@
                     </div>
 
                     {% if block.settings.image %}
-                        {{ block.settings.image | image_url: width: 715 | image_tag: class: "dotted-slide__right-image" }}
+                        {{ block.settings.image | image_url: width: 1430, format: 'webp' | image_tag: class: "dotted-slide__right-image" }}
                     {% endif %}
 
                 </div>
