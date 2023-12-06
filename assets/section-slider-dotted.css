@@ -6,6 +6,10 @@
     align-items: center;
 }
 
+.slider-dotted{
+    overflow: hidden;
+}
+
 .swiper-slide.dotted-slide {
     margin-top: 50px;
     display: grid;
