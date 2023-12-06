@@ -97,12 +97,16 @@ h2,p, h3{
   .horizontal-cards__horizontal-card.active{
     margin-top: 100px;
   }
+
+  .horizontal-cards__horizontal-card:first-child.active{
+    margin-top: 0;
+  }
   
   .horizontal-cards__heading{
     display: flex;
     flex-direction: column;
     gap: 10px;
-    margin-bottom: 80px;
+    margin-bottom: 60px;
   }
   
   .horizontal-cards__heading-links .heading-links__primary{
